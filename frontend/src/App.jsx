@@ -1,4 +1,5 @@
 import MovieList from "@components/MovieList";
+import ContactForm from "./components/ContactForm";
 import Carrousel from "./components/Carrousel";
 
 import "./App.css";
@@ -42,6 +43,7 @@ function App() {
       <h1 className="text-center text-white">Catalogue des films</h1>
       <MovieList movies={movies} />
       <Carrousel />
+      <ContactForm />
     </main>
   );
 }
