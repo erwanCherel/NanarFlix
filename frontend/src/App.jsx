@@ -1,4 +1,6 @@
 import MovieList from "@components/MovieList";
+import Carrousel from "./components/Carrousel";
+
 import "./App.css";
 
 const movies = [
@@ -39,6 +41,7 @@ function App() {
     <main className=" p-6 min-h-screen">
       <h1 className="text-center text-white">Catalogue des films</h1>
       <MovieList movies={movies} />
+      <Carrousel />
     </main>
   );
 }
