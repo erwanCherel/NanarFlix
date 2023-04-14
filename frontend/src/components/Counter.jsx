@@ -7,7 +7,7 @@ export default function Counter() {
     <p>
       <button
         type="button"
-        onClick={() => setCount((oldCount) => oldCount + 1)}
+        onClick={() => setCount((oldCount) => oldCount + 10)}
       >
         count is: {count}
       </button>
