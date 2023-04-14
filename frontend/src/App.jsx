@@ -1,8 +1,10 @@
 import MovieList from "@components/MovieList";
+import Home from "./pages/Home";
 import ContactForm from "./components/ContactForm";
 import Carrousel from "./components/Carrousel";
 
 import "./App.css";
+import "./components/header.scss";
 
 const movies = [
   {
@@ -41,6 +43,7 @@ function App() {
   return (
     <main className=" p-6 min-h-screen">
       <h1 className="text-center text-white">Catalogue des films</h1>
+      <Home />
       <MovieList movies={movies} />
       <Carrousel />
       <ContactForm />
