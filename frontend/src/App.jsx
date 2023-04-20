@@ -1,4 +1,3 @@
-
 import Home from "./pages/Home";
 import Carrousel from "./components/Carrousel";
 import MovieSection from "./components/MovieSection";
