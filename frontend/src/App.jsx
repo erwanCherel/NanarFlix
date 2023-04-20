@@ -1,8 +1,7 @@
-import MovieList from "@components/MovieList";
+import MovieList from "./components/MovieList";
 import Home from "./pages/Home";
-import ContactForm from "./components/ContactForm";
-import Carrousel from "./components/Carrousel";
 
+import Carrousel from "./components/Carrousel";
 import "./App.css";
 import "./components/header.scss";
 
@@ -46,7 +45,6 @@ function App() {
       <Home />
       <MovieList movies={movies} />
       <Carrousel />
-      <ContactForm />
     </main>
   );
 }
