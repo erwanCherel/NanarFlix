@@ -1,23 +1,23 @@
-import { Routes, Route } from "react-router-dom";
-import MovieList from "./components/MovieList";
 import Home from "./pages/Home";
+import Carrousel from "./components/Carrousel";
+import MovieSection from "./components/MovieSection";
+import SerieSection from "./components/SerieSection";
+import CritiqueSection from "./components/CritiqueSection";
+
 import "./App.css";
 import "./components/header.scss";
-import MovieDetails from "./components/MovieDetails";
 
 function App() {
   return (
-    <main className=" min-h-screen">
+    <main className="min-h-screen">
       <Home />
-      {/* <section>
-        <Carrousel />
-      </section> */}
-      {/* <MovieList movies={movies} /> */}
-      {/* <ContactForm /> */}
-      <Routes>
-        <Route path="/movies" element={<MovieList />} />
-        <Route path="/movies/:id" element={<MovieDetails />} />
-      </Routes>
+      <Carrousel />
+
+      <div className="md:grid md:grid-cols-2  md:grid-flow-row md:grid-">
+        <MovieSection />
+        <SerieSection />
+      </div>
+      <CritiqueSection />
     </main>
   );
 }
