@@ -743,8 +743,6 @@ packages:
     resolution:
       {
         integrity: sha512-aWajIYfsqCKRDgUfjEXNN/JlrzauMuSEy5sbd7WXbtW3EH6A6MpwEh42c7qD+MqQo9QMJ6fWLAeIJynx0g6OAw==,
-
-
       }
     engines: { node: ">=4" }
     peerDependencies:
