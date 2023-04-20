@@ -743,7 +743,6 @@ packages:
     resolution:
       {
         integrity: sha512-aWajIYfsqCKRDgUfjEXNN/JlrzauMuSEy5sbd7WXbtW3EH6A6MpwEh42c7qD+MqQo9QMJ6fWLAeIJynx0g6OAw==,
-
       }
     engines: { node: ">=4" }
     peerDependencies:
@@ -792,7 +791,9 @@ packages:
       eslint: 8.32.0
       eslint-import-resolver-node: 0.3.7
 
+
       eslint-module-utils: 2.8.0(eslint-import-resolver-node@0.3.7)(eslint@8.32.0)
+
       has: 1.0.3
       is-core-module: 2.12.0
       is-glob: 4.0.3
@@ -831,6 +832,7 @@ packages:
     resolution:
       {
         integrity: sha512-DYj5deGlHBfMt15J7rdtyKNq/Nqlv5KfU4iodrQ019XESsRnwXH9KAE0y3cwtUHDo2ob7CypAnCqefh6vioWRw==,
+
       }
     engines: { node: ^12.22.0 || ^14.17.0 || >=16.0.0 }
     dependencies:
@@ -885,7 +887,9 @@ packages:
       debug: 4.3.4
       doctrine: 3.0.0
       escape-string-regexp: 4.0.0
+
       eslint-scope: 7.2.0
+
       eslint-utils: 3.0.0(eslint@8.32.0)
       eslint-visitor-keys: 3.4.0
       espree: 9.5.1
@@ -1839,7 +1843,9 @@ packages:
       generate-function: 2.3.1
       iconv-lite: 0.6.3
 
+
       long: 5.2.3
+
 
       lru-cache: 7.18.3
       named-placeholders: 1.1.3
