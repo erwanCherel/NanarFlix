@@ -1,10 +1,16 @@
-import MovieList from "@components/MovieList";
-import Home from "./pages/Home";
-import ContactForm from "./components/ContactForm";
-import Carrousel from "./components/Carrousel";
-
 import "./App.css";
 import "./components/header.scss";
+import "./components/footer.scss";
+import "./components/profile.scss";
+import { Routes, Route } from "react-router-dom";
+
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Annuaire from "./pages/Annuaire";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import Communaute from "./pages/Communaute";
+import Profil from "./pages/Profil";
 
 const movies = [
   {
@@ -41,12 +47,16 @@ const movies = [
 
 function App() {
   return (
-    <main className=" p-6 min-h-screen">
-      <h1 className="text-center text-white">Catalogue des films</h1>
-      <Home />
-      <MovieList movies={movies} />
-      <Carrousel />
-      <ContactForm />
+    <main className="flex flex-col justify-between min-h-screen">
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/annuaire" element={<Annuaire movies={movies} />} />
+        <Route path="/communaute" element={<Communaute />} />
+        <Route path="/profil" element={<Profil />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <Footer />
     </main>
   );
 }

@@ -3,7 +3,7 @@ import Movie from "@components/Movie";
 
 export default function MovieList({ movies }) {
   return (
-    <section className="mx-auto mt-4  gap-4 ">
+    <section className="mx-auto gap-4 ">
       {movies.map((movie) => (
         <Movie {...movie} key={`movie-${movie.id}`} />
       ))}
