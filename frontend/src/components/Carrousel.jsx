@@ -49,7 +49,7 @@ export default function Carrousel() {
       showThumbs={false}
       showStatus={false}
       showIndicators={false}
-      className="md:max-w-6xl ml-auto mr-auto "
+      className="md:max-w-6xl ml-auto mr-auto"
     >
       {datas.map((slide) => (
         <div key={slide.id}>
