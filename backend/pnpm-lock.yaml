@@ -737,8 +737,6 @@ packages:
       - supports-color
     dev: true
 
-
-
   /eslint-module-utils@2.8.0(eslint-import-resolver-node@0.3.7)(eslint@8.32.0):
     resolution:
       {
@@ -791,7 +789,6 @@ packages:
       eslint: 8.32.0
       eslint-import-resolver-node: 0.3.7
 
-
       eslint-module-utils: 2.8.0(eslint-import-resolver-node@0.3.7)(eslint@8.32.0)
 
       has: 1.0.3
@@ -832,7 +829,6 @@ packages:
     resolution:
       {
         integrity: sha512-DYj5deGlHBfMt15J7rdtyKNq/Nqlv5KfU4iodrQ019XESsRnwXH9KAE0y3cwtUHDo2ob7CypAnCqefh6vioWRw==,
-
       }
     engines: { node: ^12.22.0 || ^14.17.0 || >=16.0.0 }
     dependencies:
@@ -1729,12 +1725,10 @@ packages:
       }
     dev: true
 
-
   /long@5.2.3:
     resolution:
       {
         integrity: sha512-lcHwpNoggQTObv5apGNCTdJrO69eHOZMi4BNC+rTLER8iHAqGrUVeLh/irVIM7zTw2bOXA8T6uNPeujwOLg/2Q==,
-
       }
     dev: false
 
@@ -1843,9 +1837,7 @@ packages:
       generate-function: 2.3.1
       iconv-lite: 0.6.3
 
-
       long: 5.2.3
-
 
       lru-cache: 7.18.3
       named-placeholders: 1.1.3

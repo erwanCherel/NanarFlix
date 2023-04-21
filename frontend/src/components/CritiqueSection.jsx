@@ -3,7 +3,7 @@ import React from "react";
 export default function CritiqueSection() {
   return (
     <div>
-      <h2 className="font-['impact'] bg-gradient-to-r from-orange-200 to-purple-400 uppercase rounded-md my-6 mx-3 px-3 py-1 text-[#472f4a] md:ml-12 md:mr-12">
+      <h2 className="bg-gradient-to-r from-orange-200 to-purple-400 uppercase rounded-md my-6 mx-3 px-3 py-1 text-[#472f4a] md:ml-12 md:mr-12">
         Dernières critiques
       </h2>
       <section className="flex flex-wrap md:ml-1 md:mr-1 justify-center">

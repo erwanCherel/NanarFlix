@@ -190,3 +190,9 @@ img:hover {
 h1 {
   margin-bottom: 2em;
 }
+
+@media screen and (min-width: 1160px) {
+  .carousel-root {
+    margin-top: 3rem;
+  }
+}

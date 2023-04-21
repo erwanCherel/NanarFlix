@@ -164,7 +164,7 @@ const movies = [
 export default function MovieSection() {
   return (
     <div className="md:p-5 md:col-start-1 md:col-end-2">
-      <h2 className="font-['impact'] bg-gradient-to-r from-orange-200 to-purple-400 uppercase rounded-md my-6 mx-3 px-3 py-1 text-[#472f4a] md:ml-7 md:mr-3">
+      <h2 className="bg-gradient-to-r from-orange-200 to-purple-400 uppercase rounded-md my-6 mx-3 px-3 py-1 text-[#472f4a] md:ml-7 md:mr-3">
         Films
       </h2>
       <div className="flex  gap-6 overflow-x-auto  mx-3 md:gap-5 w-auto md:ml-14 md:mr-11">

@@ -1,10 +1,10 @@
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import React, { useEffect, useState } from "react";
-import Movie from "@components/Movie";
+import Movie from "./Movie";
 
 export default function MovieList() {
   const [movieList, setMovieList] = useState([]);
-  const [currentPage, setCurrentPage] = useState(250);
+  const [currentPage, setCurrentPage] = useState(1);
 
   const getMovie = () => {
     fetch(
@@ -30,9 +30,11 @@ export default function MovieList() {
         CATALOGUE DES FILMS
       </h1>
       <section className=" gap-4 ">
-        {movieList.map((movie) => (
-          <Movie {...movie} key={`movie-${movie.id}`} />
-        ))}
+        {movieList.map((movie) =>
+          movie.poster_path ? (
+            <Movie {...movie} key={`movie-${movie.id}`} />
+          ) : null
+        )}
       </section>
       <div className="buttonPrevNext">
         <button
@@ -54,11 +56,11 @@ export default function MovieList() {
   );
 }
 
-MovieList.propTypes = {
-  title: PropTypes.string.isRequired,
-  poster_path: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired,
-};
+// MovieList.propTypes = {
+//   title: PropTypes.string.isRequired,
+//   poster_path: PropTypes.string.isRequired,
+//   id: PropTypes.number.isRequired,
+// };
 
 // MovieList.propTypes = {
 //   movies: PropTypes.arrayOf(
