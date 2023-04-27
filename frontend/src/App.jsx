@@ -4,6 +4,7 @@ import "./components/footer.scss";
 import "./components/profile.scss";
 import { Routes, Route } from "react-router-dom";
 
+import MovieDetails from "./components/MovieDetails";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Annuaire from "./pages/Annuaire";
@@ -20,8 +21,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/annuaire" element={<Annuaire />} />
         <Route path="/communaute" element={<Communaute />} />
-        <Route path="/profil" element={<Profil />} />
+        <Route path="/profil/:id" element={<Profil />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/movies/:id" element={<MovieDetails />} />
       </Routes>
       <Footer />
     </main>

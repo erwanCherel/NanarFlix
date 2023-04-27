@@ -3,21 +3,12 @@
 @tailwind utilities;
 
 * {
-  font-family: "Bebas Neue", cursive;
-  letter-spacing: 2px;
-}
-
-* {
-  font-family: "Bebas Neue", cursive;
-  letter-spacing: 2px;
-}
-
-* {
   box-sizing: border-box;
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 2px;
 }
 main {
   background-color: #321f34;
-
   display: flex;
   flex-direction: column;
 }

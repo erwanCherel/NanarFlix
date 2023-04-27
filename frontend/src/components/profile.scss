@@ -2,17 +2,58 @@ section {
   .profile-container {
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
-    margin: 2rem;
+    margin: 1rem;
     max-width: 768px;
-    background-color: rgb(248 250 252);
-    padding: 2rem 5rem;
+    color: white;
+    gap: 10px;
+    div {
+      width: 100%;
+    }
+    h4 {
+      font-size: clamp(24px, 1.75vw, 24px);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: clamp(16px, 1.5vw, 20px);
+    }
     .profile-pic {
-      min-width: 200px;
+      min-width: 150px;
+      width: 30%;
+      filter: invert(1);
     }
     .profile-name {
-      font-size: 2rem;
+      font-size: clamp(28px, 2vw, 36px);
+    }
+    .avis {
+      display: flex;
+      overflow-x: scroll;
+      gap: 30px;
+      img {
+        max-height: 300px;
+      }
+    }
+    .badges {
+      display: flex;
+      filter: invert(1);
+      height: 100px;
+      justify-content: space-between;
+      overflow-x: scroll;
+    }
+    .suggestions {
+      display: flex;
+      overflow-x: scroll;
+      gap: 30px;
+      img {
+        max-height: 300px;
+      }
+    }
+    .profile-settings p {
+      background-color: #fafafa;
+      margin-bottom: 10px;
+      padding: 0.5rem;
+      color: black;
     }
   }
 }

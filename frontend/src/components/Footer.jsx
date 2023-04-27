@@ -46,7 +46,7 @@ export default function Footer() {
             </NavLink>
           </div>
           <div className="nav profil">
-            <NavLink to="/profil" className="navlink">
+            <NavLink to="/profil/4" className="navlink">
               Profil
             </NavLink>
           </div>

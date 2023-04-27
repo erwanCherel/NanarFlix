@@ -20,6 +20,10 @@ export default function MovieDetails() {
     getOneMovie();
   }, [id]);
 
+  if (!currentMovie) {
+    return <p>Please wait...</p>;
+  }
+
   return (
     <div>
       <figure className="image-container shadow-xl">
