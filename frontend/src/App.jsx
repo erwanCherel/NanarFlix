@@ -11,6 +11,7 @@ import ContactPage from "./pages/ContactPage";
 import Communaute from "./pages/Communaute";
 import Profil from "./pages/Profil";
 import Home from "./pages/Home";
+import MovieDetails from "./components/MovieDetails";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/communaute" element={<Communaute />} />
         <Route path="/profil" element={<Profil />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/movies/:id" element={<MovieDetails />} />
       </Routes>
       <Footer />
     </main>
