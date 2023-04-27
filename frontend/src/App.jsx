@@ -12,6 +12,7 @@ import ContactPage from "./pages/ContactPage";
 import Communaute from "./pages/Communaute";
 import Profil from "./pages/Profil";
 import Home from "./pages/Home";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/annuaire" element={<Annuaire />} />
         <Route path="/communaute" element={<Communaute />} />
+        <Route path="/profil/" element={<Login />} />
         <Route path="/profil/:id" element={<Profil />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/movies/:id" element={<MovieDetails />} />
