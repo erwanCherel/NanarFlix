@@ -73,7 +73,6 @@ export default function Header() {
             </NavLink>
           </div>
         </div>
-
         <label
           htmlFor=""
           className="header-search"
