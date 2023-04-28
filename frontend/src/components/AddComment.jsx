@@ -24,8 +24,8 @@ export default function CommentBox() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center">
-      <form className="w-3/4 md:w-2/4" onSubmit={handleSubmit}>
+    <div className="div5 flex flex-col justify-center items-center">
+      <form className="w-3/4 md:w-2/4 mt-10" onSubmit={handleSubmit}>
         <label
           htmlFor="name"
           className="flex flex-col justify-center items-center text-white"
@@ -57,18 +57,18 @@ export default function CommentBox() {
         />
         <button
           type="submit"
-          className="bg-[#9EBA9B] text-white py-2 px-4 rounded mt-5 flex flex-col justify-center items-center mx-auto"
+          className="bg-[#9EBA9B] text-white py-2 px-4 rounded mt-5 flex flex-col justify-center items-center mx-auto mb-1"
         >
           Ajouter
         </button>
       </form>
-      <div className="flex flex-wrap md:ml-1 md:mr-1 justify-center">
+      <div className="flex flex-wrap md:ml-1 md:mr-1 justify-center mb-10">
         {allComments.map(({ reviewer, comment }) => (
           <div
-            className="grid grid-cols-4 gap-2 grid-flow-row grid- bg-[#9EBA9B] w-10/12 h-3/6 p-3 rounded-md mx-3 my-3 md:w-96 "
+            className="grid grid-cols-4 gap-2 grid-flow-row grid- bg-[#9EBA9B] w-10/12 h-30 p-3 rounded-md mx-3 my-3 md:w-96 md:h-28 "
             key={reviewer}
           >
-            <div className="p-2 row-start-1 row-end-3 col-start-1 col-end-2">
+            <div className="p-2 row-start-1 row-end-3 col-start-1 col-end-2 ">
               <img
                 src="https://lespetitsproducteurs.be/wp-content/uploads/2020/12/navet-violet.png"
                 alt="navet"

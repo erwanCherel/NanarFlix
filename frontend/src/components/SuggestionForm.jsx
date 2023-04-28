@@ -20,7 +20,7 @@ function SuggestionForm() {
         ) : (
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
-              <label htmlFor="name" className="block text-white font-bold mb-2">
+              <label htmlFor="name" className="block text-white  mb-2">
                 Pseudo:
               </label>
               <input
@@ -32,10 +32,7 @@ function SuggestionForm() {
             </div>
 
             <div className="mb-4">
-              <label
-                htmlFor="email"
-                className="block text-white font-bold mb-2"
-              >
+              <label htmlFor="email" className="block text-white mb-2">
                 Email:
               </label>
               <input
@@ -47,10 +44,7 @@ function SuggestionForm() {
             </div>
 
             <div className="mb-4">
-              <label
-                htmlFor="subject"
-                className="block text-white font-bold mb-2"
-              >
+              <label htmlFor="subject" className="block text-white mb-2">
                 Film/série suggeré(é):
               </label>
               <input
@@ -62,10 +56,7 @@ function SuggestionForm() {
             </div>
 
             <div className="mb-4">
-              <label
-                htmlFor="message"
-                className="block text-white font-bold mb-2"
-              >
+              <label htmlFor="message" className="block text-white mb-2">
                 Pourquoi suggérer ce(tte) film/série ? :
               </label>
               <textarea
@@ -77,7 +68,7 @@ function SuggestionForm() {
 
             <button
               type="submit"
-              className="bg-[#9EBA9B] text-white font-bold py-2 px-4 rounded mt-5"
+              className="bg-[#9EBA9B] text-white font-bold py-2 px-4 rounded mt-5 mb-14"
             >
               Suggérer
             </button>
