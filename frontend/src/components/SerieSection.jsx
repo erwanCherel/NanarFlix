@@ -124,7 +124,7 @@ const series = [
 export default function SerieSection() {
   return (
     <div className="md:p-5 md:col-start-2 md:col-end-4">
-      <h2 className="bg-gradient-to-r from-purple-400 to-orange-200 uppercase rounded-md my-6 mx-3 px-3 py-1 text-[#472f4a] md:ml-3 md:mr-7">
+      <h2 className="bg-gradient-to-r from-purple-400 to-orange-200 uppercase rounded-md my-6 mx-3 px-3 py-1 text-[#472f4a] text-lg md:ml-3 md:mr-7 font-bold">
         Séries
       </h2>
       <div className="flex gap-6 overflow-x-auto  mx-3 md:gap-5 w-auto md:ml-11 md:mr-11">

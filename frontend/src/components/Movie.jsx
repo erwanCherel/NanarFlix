@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Movie({ id, title, poster_path }) {
   return (
     <Link to={`/movies/${id}`}>
-      <figure className="shadow-xl w-24 md:w-48 ">
+      <figure className="image-container shadow-xl w-24 md:w-48">
         <img
           className="imgCatalog m-auto shadow-xl"
           src={`https://www.themoviedb.org/t/p/w1280${poster_path}`}

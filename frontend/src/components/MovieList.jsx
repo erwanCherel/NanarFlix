@@ -52,7 +52,6 @@ export default function MovieList() {
           <option value="18">Drame</option>
         </select>
       </form>
-
       <section className="sectionMovieList gap-4 flex flex-wrap justify-center m-3 ">
         {movieList.map((movie) =>
           movie.poster_path ? (

@@ -2,20 +2,20 @@ import React from "react";
 
 function ContactForm() {
   return (
-    <div className="flex flex-col justify-center items-center h-screen ">
+    <div className="flex flex-col justify-center items-center h-screen">
       <h1 className="text-4xl font-bold mb-8 text-[#9EBA9B]">NANARFLIX</h1>
-      <div className="text-center">
+      <div className="text-center md:w-2/5">
         <h2 className="text-2xl font-bold mb-4 text-white">Contactez-nous</h2>
         <form>
           <div className="mb-4">
-            <label htmlFor="name" className="block text-white font-bold mb-2">
+            <label htmlFor="name" className="block text-white font-bold mb-2 ">
               Pseudo:
             </label>
             <input
               type="text"
               id="name"
               name="name"
-              className="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 "
             />
           </div>
 
