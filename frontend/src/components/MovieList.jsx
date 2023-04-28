@@ -35,7 +35,7 @@ export default function MovieList() {
         CATALOGUE DES FILMS
       </h1>
       <form>
-        <label className="ml-14" for="genre">
+        <label className="ml-14" htmlFor="genre">
           Genre
         </label>
         <select

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import imgnavet from "@assets/imgnavet.png";
+
 import navet from "@assets/navet.png";
 
 export default function MovieDetails() {
