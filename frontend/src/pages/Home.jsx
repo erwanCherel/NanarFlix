@@ -2,7 +2,6 @@ import Carrousel from "@components/Carrousel.jsx";
 import MovieSection from "@components/MovieSection";
 import SerieSection from "@components/SerieSection";
 import CritiqueSection from "@components/CritiqueSection";
-import CommentBox from "@components/AddComment";
 
 export default function Home() {
   return (
@@ -13,7 +12,6 @@ export default function Home() {
         <SerieSection />
       </div>
       <CritiqueSection />
-      <CommentBox />
     </main>
   );
 }

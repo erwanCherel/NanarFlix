@@ -37,7 +37,7 @@ export default function Profile() {
   }
 
   return (
-    <section>
+    <section className="md:mx-auto">
       <div className="profile-container">
         <img src={profilePic} alt="profile pic" className="profile-pic" />
         <h2 className="profile-name">

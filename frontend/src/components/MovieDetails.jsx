@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-
 import navet from "@assets/navet.png";
+import CommentBox from "./AddComment";
 
 export default function MovieDetails() {
   const [currentMovie, setCurrentMovie] = useState();
@@ -59,6 +59,7 @@ export default function MovieDetails() {
           {currentMovie.overview}
         </p>
       </div>
+      <CommentBox />
     </div>
   );
 }
