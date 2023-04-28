@@ -29,7 +29,7 @@ export default function MovieList() {
       <h1 className="pt-10 text-center text-white font-bold text-lg">
         CATALOGUE DES FILMS
       </h1>
-      <section className=" gap-4 ">
+      <section className=" gap-4 flex flex-wrap justify-center m-3 ">
         {movieList.map((movie) =>
           movie.poster_path ? (
             <Movie {...movie} key={`movie-${movie.id}`} />
