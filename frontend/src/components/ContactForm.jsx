@@ -9,9 +9,9 @@ function ContactForm() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen ">
+    <div className="flex flex-col justify-center items-center h-screen">
       <h1 className="text-4xl font-bold mb-8 text-[#9EBA9B]">NANARFLIX</h1>
-      <div className="text-center">
+      <div className="text-center md:w-2/5">
         <h2 className="text-2xl font-bold mb-4 text-white">Contactez-nous</h2>
         {isSubmitted ? (
           <div className="bg-[#9EBA9B] rounded-lg p-8 text-center">

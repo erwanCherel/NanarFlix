@@ -25,7 +25,6 @@ function App() {
         <Route path="/communaute" element={<CommunityPage />} />
         <Route path="/profil" element={<Profil />} />
         <Route path="/contact" element={<ContactPage />} />
-
         <Route path="/movies/:id" element={<MovieDetails />} />
       </Routes>
       <Footer />
