@@ -25,6 +25,7 @@ export default function MovieDetails() {
   if (!currentMovie) {
     return <p>Please wait...</p>;
   }
+
   return (
     <div className="parent md:mr-100px">
       <div className="div1 flex justify-center ">
