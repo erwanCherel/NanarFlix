@@ -38,7 +38,7 @@ export default function Profile() {
 
   return (
     <section className="md:mx-auto">
-      <div className="profile-container ">
+      <div className="profile-container">
         <img src={profilePic} alt="profile pic" className="profile-pic" />
         <h2 className="profile-name">
           {currentUser.firstname} {currentUser.lastname}
