@@ -26,15 +26,15 @@
   }
   .hamburger {
     z-index: 13;
-    background-image: url("./src/assets/icons/hamburger-icon.svg");
+    background-image: url("/src/assets/icons/hamburger-icon.svg");
   }
   .search {
     margin-right: auto;
-    background-image: url("src/assets/icons/search-icon.svg");
+    background-image: url("/src/assets/icons/search-icon.svg");
   }
   .account {
     margin-left: auto;
-    background-image: url("src/assets/icons/account-icon.svg");
+    background-image: url("/src/assets/icons/account-icon.svg");
   }
 
   .header-icons {

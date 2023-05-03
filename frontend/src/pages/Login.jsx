@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Profil() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -15,16 +17,15 @@ export default function Profil() {
   const login = (e) => {
     e.preventDefault();
 
-    fetch(`${import.meta.env.VITE_BACKEND_URL}/login`, {
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/users/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ email, password }),
     })
-      .then((response) => {
-        console.info(response);
-      })
+      .then((response) => response.json())
+      .then((data) => navigate(`/profil/${data.id}`))
       .catch((error) => {
         console.error(error);
       });

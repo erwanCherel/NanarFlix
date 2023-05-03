@@ -23,13 +23,13 @@ export default function Header() {
     if (burgerActive) {
       headerMenu.style.visibility = "hidden";
       hamburgerIcon.style.backgroundImage =
-        "url('./src/assets/icons/hamburger-icon.svg')";
+        "url('/src/assets/icons/hamburger-icon.svg')";
       hamburgerIcon.style.position = "";
       setBurgerActive(false);
     } else {
       headerMenu.style.visibility = "visible";
       hamburgerIcon.style.backgroundImage =
-        "url('./src/assets/icons/close-icon.svg')";
+        "url('/src/assets/icons/close-icon.svg')";
       hamburgerIcon.style.position = "fixed";
       setBurgerActive(true);
     }
