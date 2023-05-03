@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import SoftThemeButton from "./SoftTheme";
 
 export default function Footer() {
   return (
@@ -28,7 +29,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p className="copyright">copyright ©️ Nanarflix</p>
+        <p className="copyright">copyright ©️ Nanarflix</p> <SoftThemeButton />
         <div className="footer-menu">
           <div className="nav accueil">
             <NavLink to="/" className="navlink">

@@ -78,6 +78,22 @@ export default function Header() {
             </NavLink>
           </div>
         </div>
+        <label
+          htmlFor=""
+          className="header-search"
+          style={{ visibility: "hidden" }}
+        >
+          <div className="search-container ">
+            <input
+              placeholder="Recherche..."
+              type="text"
+              className="inputSearch"
+            />
+            <button className="buttonSearch" type="button">
+              Rechercher
+            </button>
+          </div>
+        </label>
       </header>
     </header>
   );

@@ -3,10 +3,11 @@
 @tailwind utilities;
 
 * {
-  box-sizing: border-box;
   font-family: "Bebas Neue", cursive;
   letter-spacing: 2px;
+  box-sizing: border-box;
 }
+
 main {
   background-color: #321f34;
   display: flex;
@@ -15,12 +16,15 @@ main {
 
 .carousel .overlay {
   width: 80%;
+  height: 60%;
+  overflow: auto;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   left: 10%;
   text-align: left;
-  background: rgba(50, 31, 52, 0.7);
+  background: rgba(50, 31, 52, 0.6);
+  border-radius: 10px;
   color: white;
   display: none;
   padding: 16px;
@@ -60,30 +64,12 @@ main {
   }
 }
 
-/* img {
-/* img {
-  max-width: 70px;
-} */
-
 figure {
-  width: 100px;
-}
-
-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  /* margin-top: 50px; */
-  margin: 20px;
+  width: 200px;
 }
 
 h2 {
   font-size: small;
-}
-
-.image-container {
-  position: relative;
-  display: inline-block;
 }
 
 .text-overlay {
@@ -103,7 +89,7 @@ h2 {
   text-align: center;
 }
 
-img:hover {
+.imgCatalog:hover {
   opacity: 0.5;
 }
 
@@ -185,5 +171,36 @@ h1 {
 @media screen and (min-width: 1160px) {
   .carousel-root {
     margin-top: 3rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 0.25fr) repeat(1, 0.5fr) repeat(1, 0.25fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  .div1 {
+    grid-area: 1 / 1 / 4 / 3;
+  }
+  .div2 {
+    grid-area: 2 / 3 / 2 / 6;
+  }
+  .div3 {
+    grid-area: 2 / 3 / 3 / 6;
+  }
+  .div4 {
+    grid-area: 3 / 3 / 4 / 6;
+  }
+
+  .div5 {
+    grid-area: 5 / 1 / 6 / 6;
+  }
+
+  .imgMovieDetail {
+    height: 500px;
   }
 }
