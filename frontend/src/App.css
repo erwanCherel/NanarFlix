@@ -14,6 +14,10 @@ main {
   flex-direction: column;
 }
 
+.routes {
+  height: 100%;
+}
+
 .carousel .overlay {
   width: 80%;
   height: 60%;

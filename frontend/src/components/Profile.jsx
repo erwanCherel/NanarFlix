@@ -5,6 +5,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import badge from "../assets/badge-default.svg";
 import profilePic from "../assets/icons/account-icon.svg";
 import Movie from "./Movie";
+import SettingsProfile from "./SettingsProfile";
 
 export default function Profile() {
   const navigate = useNavigate();
@@ -26,17 +27,17 @@ export default function Profile() {
 
   // data to load a profile
   const getOneUser = () => {
-    if (parseInt(id, 10) === parseInt(localStorage.getItem("id"), 10)) {
-      fetch(`${import.meta.env.VITE_BACKEND_URL}/api/users/${id}`)
-        .then((resp) => resp.json())
-        .then((data) => setCurrentUser(data))
-        .catch((err) => {
-          console.error(err);
-          navigate("/");
-        });
-    } else {
-      navigate("/");
-    }
+    // if (parseInt(id, 10) === parseInt(localStorage.getItem("id"), 10)) {
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/users/${id}`)
+      .then((resp) => resp.json())
+      .then((data) => setCurrentUser(data))
+      .catch((err) => {
+        console.error(err);
+        navigate("/");
+      });
+    // } else {
+    //   navigate("/");
+    // }
   };
 
   useEffect(() => {
@@ -96,12 +97,15 @@ export default function Profile() {
           </div>
         </div>
 
-        <div className="profile-settings">
+        {/* <div className="profile-settings">
           <h4>Gérer mon compte</h4>
           <p>Gérer mon mot de passe</p>
           <p>Gérer mon pseudo</p>
           <p>Gérer mon adresse mail</p>
-        </div>
+        </div> */}
+        {parseInt(id, 10) === parseInt(localStorage.getItem("id"), 10) ? (
+          <SettingsProfile />
+        ) : null}
       </div>
     </section>
   );

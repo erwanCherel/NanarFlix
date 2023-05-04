@@ -10,6 +10,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Annuaire from "./pages/Annuaire";
 import ContactPage from "./pages/ContactPage";
+import DefaultPage from "./pages/DefaultPage";
 
 import Profil from "./pages/Profil";
 import Home from "./pages/Home";
@@ -31,7 +32,7 @@ function App() {
   return (
     <main className="flex flex-col justify-between min-h-screen">
       <Header userId={userId} />
-      <Routes>
+      <Routes className="routes">
         <Route path="/" element={<Home />} />
         <Route path="/annuaire" element={<Annuaire />} />
         <Route path="/communaute" element={<CommunityPage />} />
@@ -44,6 +45,7 @@ function App() {
         {userId && <Route path="/profil/:id" element={<Profil />} />}
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/movies/:id" element={<MovieDetails />} />
+        <Route path="/*" element={<DefaultPage />} />
       </Routes>
       <Footer userId={userId} />
     </main>
