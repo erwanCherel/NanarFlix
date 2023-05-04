@@ -6,7 +6,6 @@
     align-items: center;
     padding: 1rem 0;
     background: #f7d7b9;
-
     .header-logo {
       font-weight: 800;
       font-size: 1.875rem;
@@ -53,11 +52,14 @@
     background: linear-gradient(#fcecb0, #aa6cd3);
     width: 100%;
     text-align: center;
-    padding: 100px;
+    padding-top: 100px;
     line-height: 5;
     height: 100vh;
     font-size: 1.75rem;
     line-height: 5rem;
+    // .nav.profil {
+    //   display: none;
+    // }
   }
 
   .header-search {

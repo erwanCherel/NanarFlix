@@ -1,7 +1,8 @@
+import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 import SoftThemeButton from "./SoftTheme";
 
-export default function Footer() {
+export default function Footer({ userId }) {
   return (
     <footer>
       <div className="footer-content">
@@ -46,11 +47,20 @@ export default function Footer() {
               Communauté
             </NavLink>
           </div>
-          <div className="nav profil">
-            <NavLink to="/profil/4" className="navlink">
-              Profil
-            </NavLink>
-          </div>
+          {userId && (
+            <div className="nav profil">
+              <NavLink to={`/profil/${userId}`} className="navlink">
+                Profil
+              </NavLink>
+            </div>
+          )}
+          {!userId && (
+            <div className="nav login">
+              <NavLink to="/login" className="">
+                Login
+              </NavLink>
+            </div>
+          )}
           <div className="nav contact">
             <NavLink to="/contact" className="navlink">
               Nous contacter
@@ -61,3 +71,9 @@ export default function Footer() {
     </footer>
   );
 }
+
+Footer.propTypes = {
+  userId: PropTypes.number,
+};
+
+Footer.defaultProps = { userId: undefined };

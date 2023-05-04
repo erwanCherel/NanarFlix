@@ -1,10 +1,13 @@
+import PropTypes from "prop-types";
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function Profil() {
+export default function Login({ setUserId }) {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [connectionError, setConnectionError] = useState("");
 
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -25,8 +28,24 @@ export default function Profil() {
       body: JSON.stringify({ email, password }),
     })
       .then((response) => response.json())
-      .then((data) => navigate(`/profil/${data.id}`))
+      .then((data) => {
+        if (data.id === undefined || data.id === null) {
+          setConnectionError("Profile not found!");
+        } else {
+          // const loginPage = document.querySelectorAll(".nav.login");
+          // const profilPage = document.querySelectorAll(".nav.profil");
+          // loginPage[0].style.display = "none";
+          // loginPage[1].style.display = "none";
+          // profilPage[0].style.display = "contents";
+          // profilPage[1].style.display = "contents";
+          // console.log(data.id);
+          setUserId(data.id);
+          localStorage.setItem("id", data.id);
+          navigate(`/profil/${data.id}`);
+        }
+      })
       .catch((error) => {
+        setConnectionError("You must provide an email and a password!");
         console.error(error);
       });
   };
@@ -68,7 +87,14 @@ export default function Profil() {
         >
           Log in
         </button>
+        <small>{connectionError}</small>
       </form>
     </section>
   );
 }
+
+Login.propTypes = {
+  setUserId: PropTypes.number,
+};
+
+Login.defaultProps = { setUserId: undefined };

@@ -40,17 +40,21 @@ const getOneUserById = (req, res) => {
 const getLogin = (req, res) => {
   const { email, password } = req.body;
 
-  const sql = "SELECT * FROM users WHERE email = ? AND password = ?";
-  connection
-    .query(sql, [email, password])
-    .then(([result]) => {
-      if (result.length > 0) {
-        res.send({ ...result[0], password: "hidden" });
-      } else {
-        res.send({ message: "Wrong email/password combination!" });
-      }
-    })
-    .catch((err) => res.send({ err }));
+  if (!email || !password) {
+    res.status(422).send("You must provide an email and a password to log in.");
+  } else {
+    const sql = "SELECT * FROM users WHERE email = ? AND password = ?";
+    connection
+      .query(sql, [email, password])
+      .then(([result]) => {
+        if (result.length > 0) {
+          res.send({ ...result[0], password: "hidden" });
+        } else {
+          res.send({ message: "Wrong email/password combination!" });
+        }
+      })
+      .catch((err) => res.send({ err }));
+  }
 };
 
 router.get("/", getUser);
