@@ -27,15 +27,15 @@
   }
   .hamburger {
     z-index: 13;
-    background-image: url("./src/assets/icons/hamburger-icon.svg");
+    background-image: url("/src/assets/icons/hamburger-icon.svg");
   }
   .search {
     margin-right: auto;
-    background-image: url("src/assets/icons/search-icon.svg");
+    background-image: url("/src/assets/icons/search-icon.svg");
   }
   .account {
     margin-left: auto;
-    background-image: url("src/assets/icons/account-icon.svg");
+    background-image: url("/src/assets/icons/account-icon.svg");
   }
 
   .header-icons {
@@ -83,6 +83,16 @@
     color: white;
     padding: 0.5rem;
     border-radius: 0 7px 7px 0;
+  }
+
+  .search-container {
+    li {
+      width: 80rem;
+      padding-top: 13px;
+    }
+    li:hover {
+      background-color: #9eba9b;
+    }
   }
 
   @media screen and (min-width: 480px) {

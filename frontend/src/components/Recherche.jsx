@@ -1,26 +1,42 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Recherche() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [movieSearch, setMovieSearch] = useState([]);
+  const [searchResults, setSearchResults] = useState([]);
+  const [searchActive, setSearchActive] = useState(true);
 
   const getMoviebySearch = () => {
     fetch(
       `https://api.themoviedb.org/3/search/movie?api_key=${
         import.meta.env.VITE_API_KEY
-      }&query=${movieSearch}`
+      }&query=${searchQuery}`
     )
       .then((res) => res.json())
-      .then((data) => setMovieSearch(data));
+      .then((data) => setSearchResults(data.results));
   };
 
-  const handleSearchInputChange = (event) => {
-    setSearchQuery(event.target.value);
-  };
-
-  const handleSearchSubmit = (event) => {
-    event.preventDefault();
+  useEffect(() => {
     getMoviebySearch();
+  }, []);
+
+  const handleChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
+
+  const handleSearch = () => {
+    getMoviebySearch();
+  };
+
+  const displaySearchBar = () => {
+    const headerSearch = document.querySelector(".header-search");
+    if (searchActive) {
+      headerSearch.style.visibility = "hidden";
+      setSearchActive(false);
+    } else {
+      headerSearch.style.visibility = "visible";
+      setSearchActive(true);
+    }
   };
 
   return (
@@ -28,7 +44,6 @@ export default function Recherche() {
       htmlFor=""
       className="header-search"
       style={{ visibility: "hidden" }}
-      onSubmit={handleSearchSubmit}
     >
       <div className="search-container ">
         <input
@@ -36,17 +51,25 @@ export default function Recherche() {
           type="text"
           className="inputSearch"
           value={searchQuery}
-          onChange={handleSearchInputChange}
+          onChange={handleChange}
         />
-        <button className="buttonSearch" type="button">
+        <button
+          id="myButton"
+          className="buttonSearch"
+          type="button"
+          onClick={handleSearch}
+        >
           Rechercher
         </button>
-        <div>
-          <img
-            src={`https://www.themoviedb.org/t/p/w1280${movieSearch.poster_path}`}
-            alt=""
-          />
-        </div>
+        <ul>
+          {searchResults.map((movie) => (
+            <Link to={`/movies/${movie.id}`}>
+              <li key={movie.id} onClick={displaySearchBar}>
+                {movie.title}
+              </li>
+            </Link>
+          ))}
+        </ul>
       </div>
     </label>
   );

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const movies = [
   {
     title: "Ninja Kids",
@@ -169,9 +171,11 @@ export default function MovieSection() {
       </h2>
       <div className="flex  gap-6 overflow-x-auto  mx-3 md:gap-5 w-auto md:ml-14 md:mr-11">
         {movies.map((movie) => (
-          <div className=" w-24 md:w-36 flex-shrink-0" key={movie.title}>
-            <img src={movie.image} alt={movie.title} />
-          </div>
+          <Link to={`/movies/${movie.id}`}>
+            <div className=" w-24 md:w-36 flex-shrink-0" key={movie.title}>
+              <img src={movie.image} alt={movie.title} />
+            </div>
+          </Link>
         ))}
       </div>
     </div>
