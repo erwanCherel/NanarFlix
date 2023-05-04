@@ -14,7 +14,7 @@ function Rating() {
       {Array.from({ length: 5 }).map((_, index) => (
         <img
           className="w-10 flex-shrink-0"
-          key={rating}
+          key={setRating}
           src={index < rating ? turnipColor : turnipNoColor}
           alt="Rating icon"
           onClick={() => handleRatingClick(index)}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import Search from "./Search";
+import Recherche from "./Recherche";
 
 export default function Header() {
   const [burgerActive, setBurgerActive] = useState(false);
@@ -49,7 +49,7 @@ export default function Header() {
         <ul className="header-icons">
           <li className="icon hamburger" onClick={displayMenu} />
           <li className="icon search flex" onClick={displaySearchBar}>
-            <Search />
+            {/* <Search /> */}
           </li>
           <NavLink to="/profil/4" className="">
             <li className="icon account" />
@@ -83,22 +83,7 @@ export default function Header() {
             </NavLink>
           </div>
         </div>
-        <label
-          htmlFor=""
-          className="header-search"
-          style={{ visibility: "hidden" }}
-        >
-          <div className="search-container ">
-            <input
-              placeholder="Recherche..."
-              type="text"
-              className="inputSearch"
-            />
-            <button className="buttonSearch" type="button">
-              Rechercher
-            </button>
-          </div>
-        </label>
+        <Recherche />
       </header>
     </header>
   );
