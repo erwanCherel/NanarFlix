@@ -1,8 +1,11 @@
+import PropTypes from "prop-types";
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Recherche from "./Recherche";
 
-export default function Header() {
+export default function Header({ userId }) {
+  const navigate = useNavigate();
+
   const [burgerActive, setBurgerActive] = useState(false);
   const [searchActive, setSearchActive] = useState(false);
 
@@ -35,6 +38,12 @@ export default function Header() {
     }
   };
 
+  const logout = () => {
+    localStorage.removeItem("id");
+    navigate("/");
+    window.location.reload();
+  };
+
   return (
     <header className="header-container bg-slate-50">
       <header className="">
@@ -51,9 +60,11 @@ export default function Header() {
           <li className="icon search flex" onClick={displaySearchBar}>
             {/* <Search /> */}
           </li>
-          <NavLink to="/profil/4" className="">
-            <li className="icon account" />
-          </NavLink>
+          {userId && (
+            <NavLink to={`/profil/${userId}`} className="">
+              <li className="icon account" />
+            </NavLink>
+          )}
         </ul>
 
         <div className="header-menu" style={{ visibility: "hidden" }}>
@@ -72,19 +83,43 @@ export default function Header() {
               Communauté
             </NavLink>
           </div>
-          <div className="nav profil">
-            <NavLink onClick={displayMenu} to="/profil/4" className="">
-              Profil
-            </NavLink>
-          </div>
+          {userId && (
+            <div className="nav profil">
+              <NavLink
+                onClick={displayMenu}
+                to={`/profil/${userId}`}
+                className=""
+              >
+                Profil
+              </NavLink>
+            </div>
+          )}
+          {!userId && (
+            <div className="nav login">
+              <NavLink onClick={displayMenu} to="/login" className="">
+                Login
+              </NavLink>
+            </div>
+          )}
           <div className="nav contact">
             <NavLink onClick={displayMenu} to="/contact" className="">
               Nous contacter
             </NavLink>
           </div>
+          {userId && (
+            <button type="submit" onClick={logout}>
+              Se déconnecter
+            </button>
+          )}
         </div>
         <Recherche />
       </header>
     </header>
   );
 }
+
+Header.propTypes = {
+  userId: PropTypes.number,
+};
+
+Header.defaultProps = { userId: undefined };
