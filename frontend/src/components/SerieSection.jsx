@@ -1,3 +1,5 @@
+import { Link, NavLink } from "react-router-dom";
+
 const series = [
   {
     title: "Smallville",
@@ -125,13 +127,17 @@ export default function SerieSection() {
   return (
     <div className="md:p-5 md:col-start-2 md:col-end-4">
       <h2 className="bg-gradient-to-r from-purple-400 to-orange-200 uppercase rounded-md my-6 mx-3 px-3 py-1 text-[#472f4a] text-lg md:ml-3 md:mr-7 font-bold">
-        Séries
+        <NavLink to="/annuaire" className="navlink">
+          Séries
+        </NavLink>
       </h2>
       <div className="flex gap-6 overflow-x-auto  mx-3 md:gap-5 w-auto md:ml-11 md:mr-11">
         {series.map((serie) => (
-          <div className="w-24 md:w-36 flex-shrink-0 " key={serie.title}>
-            <img src={serie.image} alt={serie.title} />
-          </div>
+          <Link to={`/tv/${serie.id}`}>
+            <div className="w-24 md:w-36 flex-shrink-0 " key={serie.title}>
+              <img src={serie.image} alt={serie.title} />
+            </div>
+          </Link>
         ))}
       </div>
     </div>

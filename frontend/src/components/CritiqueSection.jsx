@@ -52,7 +52,7 @@ export default function CritiqueSection() {
       <h2 className="bg-gradient-to-r from-orange-200 to-purple-400 uppercase rounded-md my-6 mx-3 px-3 py-1 text-[#472f4a] text-lg md:ml-12 md:mr-12 font-bold">
         Dernières critiques
       </h2>
-      <section className="flex flex-wrap md:ml-1 md:mr-1 justify-center">
+      <section className="flex flex-wrap md:ml-1 md:mr-1 justify-center mb-7">
         {reviews.slice(0, 6).map(({ image_avatar, reviewer, review }) => (
           <div
             className="grid grid-cols-4 gap-2 grid-flow-row grid- bg-[#9EBA9B] w-10/12 h-3/6 p-3 rounded-md mx-3 my-3 md:w-1/4 "

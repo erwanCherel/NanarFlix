@@ -20,10 +20,11 @@ function SuggestionForm() {
         ) : (
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
-              <label htmlFor="name" className="block text-white font-bold mb-2">
+              <label htmlFor="name" className="block text-white  mb-2">
                 Pseudo:
               </label>
               <input
+                required
                 type="text"
                 id="name"
                 name="name"
@@ -32,13 +33,11 @@ function SuggestionForm() {
             </div>
 
             <div className="mb-4">
-              <label
-                htmlFor="email"
-                className="block text-white font-bold mb-2"
-              >
+              <label htmlFor="email" className="block text-white mb-2">
                 Email:
               </label>
               <input
+                required
                 type="email"
                 id="email"
                 name="email"
@@ -47,13 +46,11 @@ function SuggestionForm() {
             </div>
 
             <div className="mb-4">
-              <label
-                htmlFor="subject"
-                className="block text-white font-bold mb-2"
-              >
+              <label htmlFor="subject" className="block text-white mb-2">
                 Film/série suggeré(é):
               </label>
               <input
+                required
                 type="text"
                 id="subject"
                 name="subject"
@@ -62,13 +59,11 @@ function SuggestionForm() {
             </div>
 
             <div className="mb-4">
-              <label
-                htmlFor="message"
-                className="block text-white font-bold mb-2"
-              >
+              <label htmlFor="message" className="block text-white mb-2">
                 Pourquoi suggérer ce(tte) film/série ? :
               </label>
               <textarea
+                required
                 id="message"
                 name="message"
                 className="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none h-40"
@@ -77,7 +72,7 @@ function SuggestionForm() {
 
             <button
               type="submit"
-              className="bg-[#9EBA9B] text-white font-bold py-2 px-4 rounded mt-5"
+              className="bg-[#9EBA9B] text-white font-bold py-2 px-4 rounded mt-5 mb-14"
             >
               Suggérer
             </button>

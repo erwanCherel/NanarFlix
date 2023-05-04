@@ -7,9 +7,16 @@
     padding: 1rem 0;
     background: #f7d7b9;
 
+    .turnip-logo {
+      width: 4rem;
+      position: absolute;
+      left: 7.8rem;
+      top: -1rem;
+    }
+
     .header-logo {
       font-weight: 800;
-      font-size: 1.875rem;
+      font-size: 2.3rem;
       line-height: 2.25rem;
       display: flex;
       position: absolute;
@@ -27,15 +34,15 @@
   }
   .hamburger {
     z-index: 13;
-    background-image: url("./src/assets/icons/hamburger-icon.svg");
+    background-image: url("/src/assets/icons/hamburger-icon.svg");
   }
   .search {
     margin-right: auto;
-    background-image: url("src/assets/icons/search-icon.svg");
+    background-image: url("/src/assets/icons/search-icon.svg");
   }
   .account {
     margin-left: auto;
-    background-image: url("src/assets/icons/account-icon.svg");
+    background-image: url("/src/assets/icons/account-icon.svg");
   }
 
   .header-icons {
@@ -85,9 +92,30 @@
     border-radius: 0 7px 7px 0;
   }
 
+  .search-container {
+    li {
+      width: 80rem;
+      padding-top: 13px;
+    }
+    li:hover {
+      background-color: #9eba9b;
+    }
+  }
+
   @media screen and (min-width: 480px) {
     header {
       padding: 2rem 0;
+
+      .turnip-logo {
+        width: 7rem;
+        position: absolute;
+        left: 9.3rem;
+        top: -2.8rem;
+      }
+
+      .header-logo {
+        font-size: 3rem;
+      }
     }
     .header-icons {
       gap: 1rem;

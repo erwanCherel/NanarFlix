@@ -15,7 +15,7 @@ function CommunityPage() {
       <button
         type="submit"
         onClick={toggleForm}
-        className="bg-[#9EBA9B] text-white font-bold py-2 px-4 rounded mt-5 mx-auto ml-11"
+        className="flex  justify-center items-center bg-[#9EBA9B] text-white py-2 px-4 rounded mt-5 mx-auto ml-11 mb-6"
       >
         Suggérer un film
       </button>
