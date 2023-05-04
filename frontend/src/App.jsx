@@ -6,6 +6,7 @@ import "./components/footer.scss";
 import "./components/profile.scss";
 import { Routes, Route } from "react-router-dom";
 import MovieDetails from "./components/MovieDetails";
+import TvDetails from "./components/TvDetails";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Annuaire from "./pages/Annuaire";
@@ -46,6 +47,7 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/movies/:id" element={<MovieDetails />} />
         <Route path="/*" element={<DefaultPage />} />
+        <Route path="/tv/:id" element={<TvDetails />} />
       </Routes>
       <Footer userId={userId} />
     </main>

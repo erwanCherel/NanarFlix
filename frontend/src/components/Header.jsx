@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import Search from "./Search";
+import Recherche from "./Recherche";
 
 export default function Header({ userId }) {
   const navigate = useNavigate();
@@ -48,12 +48,17 @@ export default function Header({ userId }) {
     <header className="header-container bg-slate-50">
       <header className="">
         <div className="header-logo">
+          <img
+            className="turnip-logo"
+            src="/src/assets/supernavet.png"
+            alt="supernavet"
+          />
           <NavLink to="/">NANARFLIX</NavLink>
         </div>
         <ul className="header-icons">
           <li className="icon hamburger" onClick={displayMenu} />
           <li className="icon search flex" onClick={displaySearchBar}>
-            <Search />
+            {/* <Search /> */}
           </li>
           {userId && (
             <NavLink to={`/profil/${userId}`} className="">
@@ -107,22 +112,7 @@ export default function Header({ userId }) {
             </button>
           )}
         </div>
-        <label
-          htmlFor=""
-          className="header-search"
-          style={{ visibility: "hidden" }}
-        >
-          <div className="search-container ">
-            <input
-              placeholder="Recherche..."
-              type="text"
-              className="inputSearch"
-            />
-            <button className="buttonSearch" type="button">
-              Rechercher
-            </button>
-          </div>
-        </label>
+        <Recherche />
       </header>
     </header>
   );

@@ -6,6 +6,12 @@ export default function Footer({ userId }) {
   return (
     <footer>
       <div className="footer-content">
+        {" "}
+        <img
+          className="turnip-logo"
+          src="/src/assets/fannavet.png"
+          alt="fannavet"
+        />
         <h3>NANARFLIX</h3>
         <p>
           Nanarflix est le site de référence sur les nanars ! Sur Nanarflix vous
@@ -28,7 +34,6 @@ export default function Footer({ userId }) {
           </a>
         </div>
       </div>
-
       <div className="footer-bottom">
         <p className="copyright">copyright ©️ Nanarflix</p> <SoftThemeButton />
         <div className="footer-menu">

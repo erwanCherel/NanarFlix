@@ -31,7 +31,7 @@ main {
   border-radius: 10px;
   color: white;
   display: none;
-  padding: 16px;
+  padding: 5px;
 }
 
 .carousel:hover .overlay {
@@ -44,6 +44,12 @@ main {
 .carousel .thumbs-wrapper {
   position: absolute;
   margin-top: -200px;
+}
+
+.carousel img {
+  height: 10em;
+  object-fit: cover;
+  object-position: 50% 50%;
 }
 
 @media screen and (min-width: 400px) {
@@ -88,15 +94,6 @@ h2 {
   transition: opacity 0.3s ease-in-out;
 }
 
-.image-container:hover .text-overlay {
-  opacity: 1;
-  text-align: center;
-}
-
-.imgCatalog:hover {
-  opacity: 0.5;
-}
-
 .buttonPrevNext {
   display: flex;
   flex-direction: row;
@@ -117,7 +114,6 @@ h2 {
   color: green;
   cursor: pointer;
   display: inline-block;
-  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
   padding: 7px 20px;
   text-align: center;
   text-decoration: none;
@@ -141,7 +137,6 @@ h2 {
   color: green;
   cursor: pointer;
   display: inline-block;
-  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
   padding: 7px 20px;
   text-align: center;
   text-decoration: none;
