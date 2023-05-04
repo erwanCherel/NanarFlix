@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import navet from "@assets/navet.png";
+import Rating from "./Rating";
 import CommentBox from "./AddComment";
 
 export default function MovieDetails() {
@@ -43,10 +43,8 @@ export default function MovieDetails() {
           </h2>
         </div>
 
-        <div className=" flex md:pr-12 ">
-          <img className="max-h-8 md:max-h-12 " src={navet} alt="imagenavet" />
-          <img className="max-h-8 md:max-h-12 " src={navet} alt="imagenavet" />
-          <img className="max-h-8 md:max-h-12 " src={navet} alt="imagenavet" />
+        <div className=" flex md:pr-12 mb-4">
+          <Rating />
         </div>
         <div className="  text-sm ml-3 md: text-white">
           Sortie : {currentTv.first_air_date}
