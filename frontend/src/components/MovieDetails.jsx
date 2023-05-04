@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import navet from "@assets/navet.png";
 import CommentBox from "./AddComment";
+import Rating from "./Rating";
 
 export default function MovieDetails() {
   const [currentMovie, setCurrentMovie] = useState();
@@ -30,7 +30,7 @@ export default function MovieDetails() {
     <div className="parent md:mr-100px">
       <div className="div1 flex justify-center ">
         <img
-          className="imgMovieDetail h-80 w-auto mt-4 md:mb-4 "
+          className="imgMovieDetail h-80 w-auto mt-4 md:mb-6 "
           src={`https://www.themoviedb.org/t/p/w400${currentMovie.poster_path}`}
           alt={currentMovie.title}
         />
@@ -43,10 +43,8 @@ export default function MovieDetails() {
           </h2>
         </div>
 
-        <div className=" flex md:pr-12 ">
-          <img className="max-h-8 md:max-h-12 " src={navet} alt="imagenavet" />
-          <img className="max-h-8 md:max-h-12 " src={navet} alt="imagenavet" />
-          <img className="max-h-8 md:max-h-12 " src={navet} alt="imagenavet" />
+        <div className=" flex md:pr-12 mb-4">
+          <Rating />
         </div>
         <div className="  text-sm ml-3 md: text-white">
           Sortie : {currentMovie.release_date}
@@ -55,7 +53,7 @@ export default function MovieDetails() {
 
       <div className="div4 md:mt-8 ">
         <h2 className="text-2xl mt-6 ml-3  text-white">SYNOPSIS :</h2>
-        <p className="text-left ml-3 mr-3 md:text-left text-[#9EBA9B]">
+        <p className="text-left ml-3 mr-3 w-5/6 md:text-left text-[#9EBA9B]">
           {currentMovie.overview}
         </p>
       </div>

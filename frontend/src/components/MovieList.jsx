@@ -35,11 +35,11 @@ export default function MovieList() {
         CATALOGUE DES FILMS
       </h1>
       <form>
-        <label className="ml-14" htmlFor="genre">
+        <label className="ml-14 text-[#9EBA9B]" htmlFor="genre">
           Genre
         </label>
         <select
-          className="w-24 ml-3 "
+          className="w-24 ml-3 rounded-md border-[#9EBA9B]"
           name="genre"
           id="movieGenre "
           value={currentGenre}
@@ -63,6 +63,7 @@ export default function MovieList() {
         <button
           className="buttonPrev"
           type="button"
+          style={{ display: currentPage === 1 ? "none" : "block" }}
           onClick={() => handlePageChange(currentPage - 1)}
         >
           Page Précédente
