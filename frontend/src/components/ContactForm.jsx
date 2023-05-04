@@ -31,6 +31,7 @@ function ContactForm() {
               </label>
               <input
                 type="text"
+                required
                 id="name"
                 name="name"
                 className="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
@@ -46,6 +47,7 @@ function ContactForm() {
               </label>
               <input
                 type="email"
+                required
                 id="email"
                 name="email"
                 className="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
@@ -61,6 +63,7 @@ function ContactForm() {
               </label>
               <input
                 type="text"
+                required
                 id="subject"
                 name="subject"
                 className="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
@@ -75,6 +78,7 @@ function ContactForm() {
                 Message:
               </label>
               <textarea
+                required
                 id="message"
                 name="message"
                 className="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none"

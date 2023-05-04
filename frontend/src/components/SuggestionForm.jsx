@@ -24,6 +24,7 @@ function SuggestionForm() {
                 Pseudo:
               </label>
               <input
+                required
                 type="text"
                 id="name"
                 name="name"
@@ -36,6 +37,7 @@ function SuggestionForm() {
                 Email:
               </label>
               <input
+                required
                 type="email"
                 id="email"
                 name="email"
@@ -48,6 +50,7 @@ function SuggestionForm() {
                 Film/série suggeré(é):
               </label>
               <input
+                required
                 type="text"
                 id="subject"
                 name="subject"
@@ -60,6 +63,7 @@ function SuggestionForm() {
                 Pourquoi suggérer ce(tte) film/série ? :
               </label>
               <textarea
+                required
                 id="message"
                 name="message"
                 className="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none h-40"
