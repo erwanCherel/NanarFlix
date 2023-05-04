@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const movies = [
   {
@@ -166,8 +166,10 @@ const movies = [
 export default function MovieSection() {
   return (
     <div className="md:p-5 md:col-start-1 md:col-end-2">
-      <h2 className="bg-gradient-to-r from-orange-200 to-purple-400 uppercase rounded-md my-6 mx-3 px-3 py-1 text-[#472f4a] text-lg md:ml-7 md:mr-3 font-bold">
-        Films
+      <h2 className="bg-gradient-to-r from-orange-200 to-purple-400 uppercase rounded-md my-6 mx-3 px-3 py-1 text-[#472F4A] text-lg md:ml-7 md:mr-3 font-bold">
+        <NavLink to="/annuaire" className="navlink">
+          Films
+        </NavLink>
       </h2>
       <div className="flex  gap-6 overflow-x-auto  mx-3 md:gap-5 w-auto md:ml-14 md:mr-11">
         {movies.map((movie) => (

@@ -50,11 +50,11 @@ export default function MovieList() {
       <section className="MovieSection">
         <div className="flex flex-row-reverse justify-between">
           <form className="pt-2">
-            <label className="mr-5 text-2xl  text-[#9EBA9B]" htmlFor="genre">
+            <label className="mr-5 text-2xl text-[#9EBA9B]" htmlFor="genre">
               Genre :
             </label>
             <select
-              className="w-24 mr-14 "
+              className="w-24 mr-14 rounded-md border-[#9EBA9B]"
               name="genre"
               id="movieGenre "
               value={currentGenre}
@@ -89,6 +89,7 @@ export default function MovieList() {
           <button
             className="buttonPrev"
             type="button"
+            style={{ display: currentPage === 1 ? "none" : "block" }}
             onClick={() => handlePageChange(currentPage - 1)}
           >
             Page Précédente

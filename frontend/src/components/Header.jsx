@@ -39,6 +39,11 @@ export default function Header() {
     <header className="header-container bg-slate-50">
       <header className="">
         <div className="header-logo">
+          <img
+            className="turnip-logo"
+            src="/src/assets/supernavet.png"
+            alt="supernavet"
+          />
           <NavLink to="/">NANARFLIX</NavLink>
         </div>
         <ul className="header-icons">
