@@ -6,7 +6,7 @@ export default function Community() {
     {
       image_avatar: (
         <img
-          src="https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBob&accessoriesType=Prescription02&hairColor=Red&facialHairType=MoustacheMagnum&facialHairColor=BlondeGolden&clotheType=GraphicShirt&clotheColor=White&graphicType=Deer&eyeType=Squint&eyebrowType=FlatNatural&mouthType=Serious&skinColor=DarkBrown"
+          src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortWaved&accessoriesType=Prescription02&hairColor=Black&facialHairType=BeardMedium&facialHairColor=Black&clotheType=ShirtVNeck&clotheColor=PastelYellow&eyeType=Squint&eyebrowType=SadConcernedNatural&mouthType=Concerned&skinColor=Yellow"
           alt="Avatar"
         />
       ),
@@ -17,19 +17,18 @@ export default function Community() {
     {
       image_avatar: (
         <img
-          src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Wayfarers&hairColor=BrownDark&facialHairType=BeardLight&facialHairColor=BrownDark&clotheType=ShirtScoopNeck&clotheColor=Heather&eyeType=Close&eyebrowType=UnibrowNatural&mouthType=Grimace&skinColor=Pale"
+          src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortWaved&accessoriesType=Sunglasses&hairColor=Brown&facialHairType=BeardMedium&facialHairColor=Brown&clotheType=GraphicShirt&clotheColor=Blue02&graphicType=Resist&eyeType=Surprised&eyebrowType=RaisedExcited&mouthType=Vomit&skinColor=Pale"
           alt="Avatar"
         />
       ),
       id: 2,
       reviewer: "Julien Leroux",
-      presentation:
-        "Le cinéma, ce nouveau petit salarié de nos rêves on peut l'acheter lui, se le procurer pour une heure ou deux, comme une prostitué.",
+      presentation: "Au cinéma, on joue ; au théâtre, c'est joué.",
     },
     {
       image_avatar: (
         <img
-          src="https://avataaars.io/?avatarStyle=Transparent&topType=WinterHat3&accessoriesType=Sunglasses&hatColor=Blue01&facialHairType=Blank&clotheType=GraphicShirt&clotheColor=Gray01&graphicType=Bear&eyeType=Side&eyebrowType=Default&mouthType=Twinkle&skinColor=Light"
+          src="https://avataaars.io/?avatarStyle=Transparent&topType=LongHairStraight2&accessoriesType=Prescription02&hairColor=Brown&facialHairType=Blank&clotheType=BlazerSweater&eyeType=Surprised&eyebrowType=DefaultNatural&mouthType=Grimace&skinColor=Brown"
           alt="Avatar"
         />
       ),
@@ -41,7 +40,7 @@ export default function Community() {
     {
       image_avatar: (
         <img
-          src="https://avataaars.io/?avatarStyle=Transparent&topType=LongHairShavedSides&accessoriesType=Prescription02&facialHairType=Blank&clotheType=Overall&clotheColor=PastelBlue&eyeType=EyeRoll&eyebrowType=SadConcernedNatural&mouthType=Disbelief&skinColor=Black"
+          src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairDreads02&accessoriesType=Blank&hairColor=Black&facialHairType=Blank&facialHairColor=Blonde&clotheType=BlazerShirt&eyeType=Surprised&eyebrowType=UpDown&mouthType=Twinkle&skinColor=Light"
           alt="Avatar"
         />
       ),
@@ -53,7 +52,7 @@ export default function Community() {
     {
       image_avatar: (
         <img
-          src="https://avataaars.io/?avatarStyle=Transparent&topType=Eyepatch&facialHairType=MoustacheFancy&facialHairColor=Black&clotheType=CollarSweater&clotheColor=Blue03&eyeType=EyeRoll&eyebrowType=SadConcernedNatural&mouthType=ScreamOpen&skinColor=Brown"
+          src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairDreads01&accessoriesType=Sunglasses&hairColor=Black&facialHairType=BeardMedium&facialHairColor=Black&clotheType=CollarSweater&clotheColor=Black&eyeType=Happy&eyebrowType=FlatNatural&mouthType=Serious&skinColor=Pale"
           alt="Avatar"
         />
       ),
@@ -65,7 +64,7 @@ export default function Community() {
     {
       image_avatar: (
         <img
-          src="https://avataaars.io/?avatarStyle=Transparent&topType=LongHairStraight2&accessoriesType=Kurt&hairColor=Red&facialHairType=BeardMajestic&facialHairColor=Red&clotheType=CollarSweater&clotheColor=Gray01&eyeType=Cry&eyebrowType=DefaultNatural&mouthType=Grimace&skinColor=Brown"
+          src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairDreads01&accessoriesType=Kurt&hairColor=Black&facialHairType=Blank&clotheType=BlazerSweater&eyeType=Surprised&eyebrowType=UpDownNatural&mouthType=Sad&skinColor=Pale"
           alt="Avatar"
         />
       ),
@@ -78,14 +77,13 @@ export default function Community() {
     {
       image_avatar: (
         <img
-          src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Wayfarers&hairColor=BrownDark&facialHairType=BeardLight&facialHairColor=BrownDark&clotheType=ShirtScoopNeck&clotheColor=Heather&eyeType=Close&eyebrowType=UnibrowNatural&mouthType=Grimace&skinColor=Pale"
+          src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortFlat&accessoriesType=Blank&hairColor=Black&facialHairType=BeardLight&facialHairColor=Brown&clotheType=ShirtScoopNeck&clotheColor=PastelYellow&eyeType=Squint&eyebrowType=UpDown&mouthType=Default&skinColor=Pale"
           alt="Avatar"
         />
       ),
       id: 7,
       reviewer: "Luc Lefebure",
-      presentation:
-        "Le cinéma, ce nouveau petit salarié de nos rêves on peut l'acheter lui, se le procurer pour une heure ou deux, comme une prostitué.",
+      presentation: "Le cinéma, c'est du théâtre en conserve.",
     },
     {
       image_avatar: (
@@ -97,78 +95,78 @@ export default function Community() {
       id: 8,
       reviewer: "Florian Esnault",
       presentation:
-        "Cinématographe, art militaire. Préparer un film comme une bataille.",
+        "Ils se prennent pour Tarantino dans le film, mais ils sont morts dans la bande annonce.",
     },
     {
       image_avatar: (
         <img
-          src="https://avataaars.io/?avatarStyle=Transparent&topType=LongHairShavedSides&accessoriesType=Prescription02&facialHairType=Blank&clotheType=Overall&clotheColor=PastelBlue&eyeType=EyeRoll&eyebrowType=SadConcernedNatural&mouthType=Disbelief&skinColor=Black"
+          src="https://avataaars.io/?avatarStyle=Transparent&topType=LongHairNotTooLong&accessoriesType=Wayfarers&hairColor=Black&facialHairType=Blank&clotheType=CollarSweater&clotheColor=Black&eyeType=Squint&eyebrowType=SadConcernedNatural&mouthType=Tongue&skinColor=Yellow"
           alt="Avatar"
         />
       ),
       id: 9,
       reviewer: "Jessica Ribeiro",
       presentation:
-        "L'avion, c'est pareil que le cinéma, il n'y a que des erreurs humaines. Un mauvais film, c'est une erreur humaine.",
+        "Personne ne va voir un film qui suscite de l'indifférence.",
     },
     {
       image_avatar: (
         <img
-          src="https://avataaars.io/?avatarStyle=Transparent&topType=Eyepatch&facialHairType=MoustacheFancy&facialHairColor=Black&clotheType=CollarSweater&clotheColor=Blue03&eyeType=EyeRoll&eyebrowType=SadConcernedNatural&mouthType=ScreamOpen&skinColor=Brown"
+          src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortRound&accessoriesType=Blank&hairColor=Black&facialHairType=Blank&clotheType=GraphicShirt&clotheColor=Pink&graphicType=Bear&eyeType=Cry&eyebrowType=SadConcernedNatural&mouthType=Concerned&skinColor=Pale"
           alt="Avatar"
         />
       ),
       id: 10,
       reviewer: "Bertrand Robert",
       presentation:
-        "Le cinéma c'est l'art de bien faire les choses défendues au commun des mortels.",
+        "Je veux un Oscar pour chaque film que je me suis fait dans la tête.",
     },
     {
       image_avatar: (
         <img
-          src="https://avataaars.io/?avatarStyle=Transparent&topType=LongHairStraight2&accessoriesType=Kurt&hairColor=Red&facialHairType=BeardMajestic&facialHairColor=Red&clotheType=CollarSweater&clotheColor=Gray01&eyeType=Cry&eyebrowType=DefaultNatural&mouthType=Grimace&skinColor=Brown"
+          src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortWaved&accessoriesType=Blank&hairColor=Black&facialHairType=Blank&clotheType=GraphicShirt&clotheColor=Pink&graphicType=Bear&eyeType=Squint&eyebrowType=SadConcernedNatural&mouthType=Concerned&skinColor=Yellow"
           alt="Avatar"
         />
       ),
       id: 11,
       reviewer: "Illias Ryffel",
       presentation:
-        "Le cinéma est une question de ce qui est dans le cadre et de ce qui en sort.",
+        "Avant on allait plutôt au cinéma pour voir un film. Aujourd'hui il semble qu'on y aille plutôt pour manger.",
     },
 
     {
       image_avatar: (
         <img
-          src="https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBob&accessoriesType=Prescription02&hairColor=Red&facialHairType=MoustacheMagnum&facialHairColor=BlondeGolden&clotheType=GraphicShirt&clotheColor=White&graphicType=Deer&eyeType=Squint&eyebrowType=FlatNatural&mouthType=Serious&skinColor=DarkBrown"
+          src="https://avataaars.io/?avatarStyle=Transparent&topType=LongHairStraight2&accessoriesType=Kurt&hairColor=Black&facialHairType=Blank&clotheType=ShirtVNeck&clotheColor=PastelYellow&eyeType=Close&eyebrowType=FlatNatural&mouthType=Sad&skinColor=Pale"
           alt="Avatar"
         />
       ),
       id: 12,
       reviewer: "Camille Le Gloanic",
-      presentation: "Le cinéma est un soleil noir inlassablement attractif.",
+      presentation: "Le cinéma sonore nous a fait découvrir le silence.",
     },
     {
       image_avatar: (
         <img
-          src="https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBob&accessoriesType=Prescription02&hairColor=Red&facialHairType=MoustacheMagnum&facialHairColor=BlondeGolden&clotheType=GraphicShirt&clotheColor=White&graphicType=Deer&eyeType=Squint&eyebrowType=FlatNatural&mouthType=Serious&skinColor=DarkBrown"
+          src="https://avataaars.io/?avatarStyle=Transparent&topType=LongHairDreads&accessoriesType=Kurt&hairColor=Black&facialHairType=BeardMajestic&facialHairColor=Black&clotheType=BlazerShirt&eyeType=Side&eyebrowType=UpDownNatural&mouthType=Smile&skinColor=Pale"
           alt="Avatar"
         />
       ),
       id: 13,
       reviewer: "Quentin Silmain",
-      presentation: "Le cinéma est un soleil noir inlassablement attractif.",
+      presentation:
+        "Si le cinéma est le reflet d'une société alors la nôtre doit être peuplée de cas cliniques.",
     },
     {
       image_avatar: (
         <img
-          src="https://avataaars.io/?avatarStyle=Transparent&topType=Eyepatch&facialHairType=MoustacheFancy&facialHairColor=Black&clotheType=CollarSweater&clotheColor=Blue03&eyeType=EyeRoll&eyebrowType=SadConcernedNatural&mouthType=ScreamOpen&skinColor=Brown"
+          src="https://avataaars.io/?avatarStyle=Transparent&topType=LongHairStraight2&accessoriesType=Kurt&hairColor=Black&facialHairType=Blank&clotheType=ShirtVNeck&clotheColor=PastelYellow&eyeType=Close&eyebrowType=FlatNatural&mouthType=Sad&skinColor=Pale"
           alt="Avatar"
         />
       ),
       id: 14,
       reviewer: "Alicia Coquérant",
-      presentation:
-        "Le cinéma c'est l'art de bien faire les choses défendues au commun des mortels.",
+      presentation: "Le cinéma ? Je le fais sur un écran, pas dans la vie !",
     },
     {
       image_avatar: (
@@ -179,20 +177,18 @@ export default function Community() {
       ),
       id: 15,
       reviewer: "Cassandra Heroin",
-      presentation:
-        "Le cinéma est une question de ce qui est dans le cadre et de ce qui en sort.",
+      presentation: "La télé, c'est la maladie du cinéma.",
     },
     {
       image_avatar: (
         <img
-          src="https://avataaars.io/?avatarStyle=Transparent&topType=Eyepatch&facialHairType=MoustacheFancy&facialHairColor=Black&clotheType=CollarSweater&clotheColor=Blue03&eyeType=EyeRoll&eyebrowType=SadConcernedNatural&mouthType=ScreamOpen&skinColor=Brown"
+          src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairSides&accessoriesType=Kurt&hairColor=Brown&facialHairType=BeardMajestic&facialHairColor=Black&clotheType=Hoodie&clotheColor=White&eyeType=WinkWacky&eyebrowType=AngryNatural&mouthType=Default&skinColor=Light"
           alt="Avatar"
         />
       ),
       id: 16,
       reviewer: "Xavier Georget",
-      presentation:
-        "Le cinéma c'est l'art de bien faire les choses défendues au commun des mortels.",
+      presentation: "Cinéma : était muet de naissance.",
     },
   ];
   const [startIndex, setStartIndex] = useState(0);
@@ -237,7 +233,7 @@ export default function Community() {
               <h2 className="p-1 mb-2 text-center font-bold col-start-2 col-end-5 row-start-1 row-end-2 h-1">
                 {reviewer}
               </h2>
-              <p className="p-3 text-center col-start-2 col-end-5 row-start-2 row-end-3 overflow-auto h-20 text-xs">
+              <p className="p-3 text-center col-start-2 col-end-5 row-start-2 row-end-3 overflow-auto h-20 text-l">
                 {presentation}
               </p>
             </div>
