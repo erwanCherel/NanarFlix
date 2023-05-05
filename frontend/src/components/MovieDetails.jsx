@@ -44,7 +44,7 @@ export default function MovieDetails() {
         </div>
 
         <div className=" flex md:pr-12 mb-4">
-          <Rating />
+          <Rating id={id} />
         </div>
         <div className="  text-sm ml-3 md: text-white">
           Sortie : {currentMovie.release_date}
@@ -54,7 +54,7 @@ export default function MovieDetails() {
       <div className="div4 md:mt-8 ">
         <h2 className="text-2xl mt-6 ml-3  text-white">SYNOPSIS :</h2>
         {currentMovie.overview ? (
-          <p className="text-left ml-3 mr-3 md:text-left text-[#9EBA9B]">
+          <p className="text-left ml-3 mr-3 md:mr-32 md:text-left text-[#9EBA9B]">
             {currentMovie.overview}
           </p>
         ) : (

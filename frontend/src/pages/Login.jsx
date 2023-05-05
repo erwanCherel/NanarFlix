@@ -32,13 +32,6 @@ export default function Login({ setUserId }) {
         if (data.id === undefined || data.id === null) {
           setConnectionError("Profile not found!");
         } else {
-          // const loginPage = document.querySelectorAll(".nav.login");
-          // const profilPage = document.querySelectorAll(".nav.profil");
-          // loginPage[0].style.display = "none";
-          // loginPage[1].style.display = "none";
-          // profilPage[0].style.display = "contents";
-          // profilPage[1].style.display = "contents";
-          // console.log(data.id);
           setUserId(data.id);
           localStorage.setItem("id", data.id);
           navigate(`/profil/${data.id}`);
@@ -94,7 +87,7 @@ export default function Login({ setUserId }) {
 }
 
 Login.propTypes = {
-  setUserId: PropTypes.number,
+  setUserId: PropTypes.func,
 };
 
 Login.defaultProps = { setUserId: undefined };

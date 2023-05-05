@@ -2,8 +2,7 @@ const router = require("express").Router();
 const connection = require("../dbConnection");
 
 const getComments = (req, res) => {
-  const sql =
-    "SELECT id, newReviewer, newComment, newAvatarImage FROM comments";
+  const sql = "SELECT * FROM comments";
   connection
     .query(sql)
     .then(([comments]) => res.json(comments))
@@ -13,18 +12,17 @@ const getComments = (req, res) => {
     });
 };
 
-const getOneCommentById = (req, res) => {
-  const idComment = parseInt(req.params.id, 10);
-  if (Number.isNaN(idComment)) {
+const getIdMovie = (req, res) => {
+  const idMovie = parseInt(req.params.idMovie, 10);
+  if (Number.isNaN(idMovie)) {
     res.sendStatus(404);
   } else {
-    const sql =
-      "SELECT id, newReviewer, newComment, newAvatarImage FROM comments WHERE id= ?";
+    const sql = "SELECT * FROM comments WHERE idMovie = ?";
     connection
-      .query(sql, [idComment])
-      .then(([comments]) => {
-        if (comments.length > 0) {
-          res.json(comments[0]);
+      .query(sql, [idMovie])
+      .then(([result]) => {
+        if (result.length > 0) {
+          res.json([...result]);
         } else {
           res.sendStatus(404);
         }
@@ -37,20 +35,24 @@ const getOneCommentById = (req, res) => {
 };
 
 const addComment = (req, res) => {
-  const { newReviewer, newComment, newAvatarImage } = req.body;
-  if (!newReviewer || !newComment) {
+  const { idMovie, reviewer, comment, avatarImage } = req.body;
+  if (!reviewer || !comment) {
     return res.sendStatus(422);
   }
 
   const sql =
-    "INSERT INTO comments (newReviewer, newComment, newAvatarImage) VALUES (?, ?, ?)";
+    "INSERT INTO comments (idMovie, reviewer, comment, avatarImage) VALUES (?, ?, ?, ?)";
 
   return connection
-    .query(sql, [newReviewer, newComment, newAvatarImage])
+    .query(sql, [idMovie, reviewer, comment, avatarImage])
     .then(([result]) => {
-      return res
-        .status(201)
-        .json({ id: result.insertId, newReviewer, newComment, newAvatarImage });
+      return res.status(201).json({
+        id: result.insertId,
+        idMovie,
+        reviewer,
+        comment,
+        avatarImage,
+      });
     })
     .catch((err) => {
       console.error(err);
@@ -58,25 +60,27 @@ const addComment = (req, res) => {
     });
 };
 
-const deleteComment = (req, res) => {
-  const idComment = parseInt(req.params.id, 10);
-  if (Number.isNaN(idComment)) {
-    res.sendStatus(422);
-  } else {
-    const sql = "DELETE FROM comments WHERE id= ?";
-    connection.query(sql, [idComment]).then(([result]) => {
-      if (result.affectedRows === 0) {
-        res.sendStatus(404);
-      } else {
-        res.sendStatus(204);
-      }
-    });
-  }
-};
+// const deleteComment = (req, res) => {
+//   const idComment = parseInt(req.params.id, 10);
+//   if (Number.isNaN(idComment)) {
+//     res.sendStatus(422);
+//   } else {
+//     const sql = "DELETE FROM comments WHERE id= ?";
+//     connection.query(sql, [idComment]).then(([result]) => {
+//       if (result.affectedRows === 0) {
+//         res.sendStatus(404);
+//       } else {
+//         res.sendStatus(204);
+//       }
+//     });
+//   }
+// };
 
 router.get("/", getComments);
-router.get("/:id", getOneCommentById);
+router.get("/:idMovie", getIdMovie);
 router.post("/", addComment);
-router.delete("/:id", deleteComment);
+// router.get("/:id", getOneCommentById);
+
+// router.delete("/:id", deleteComment);
 
 module.exports = router;

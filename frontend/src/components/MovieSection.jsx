@@ -2,6 +2,36 @@ import { Link, NavLink } from "react-router-dom";
 
 const movies = [
   {
+    title: "Sharknado 3 : Oh Hell No!",
+    id: 331446,
+    genre: "Science-Fiction",
+    overview:
+      "Après avoir fait des ravages à Los Angeles, puis à New York, la troisième tornade de requins fait un retour destructeur dans la capitale des Etats-Unis, juste au moment où Fin se rend à la Maison Blanche. Après avoir détruit Washington D.C., la ’Sharknado’ détruira tout sur son passage jusqu’aux côtes de Floride, où April, enceinte de 9 mois atend impatiemment Fin. Alors qu’il rejoint sa famille au plus vite, des centaines de tornades de requins font alors leurs apparitions pour ne former plus qu’une tornade géante, qui menace de détruire toute la côte Est. Fin réalise qu’il va devoir trouver une solution, qui ne se trouve peut-être pas sur Terre ...",
+    release: "23/07/2015",
+    image:
+      "https://www.themoviedb.org/t/p/w1280/r7pYDCfhqw1DIxAcNNPvwKnn8ms.jpg",
+  },
+  {
+    title: "Zombie Ass",
+    id: 101733,
+    genre: "Comédie",
+    overview:
+      "Un groupe d’amis se fait attaquer par des zombies sortant des toilettes. Ils doivent également faire face à une mystérieuse infection avec des vers parasites...",
+    release: "25/02/2012",
+    image:
+      "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sKJ1uRFB8eFUD40uVOqGl9MXAoY.jpg",
+  },
+  {
+    title: "L'attaque du requin à 6 têtes",
+    id: 522438,
+    genre: "Horreur",
+    overview:
+      "Plusieurs couples se rendent sur une île pour participer à un camp censé resserrer leurs liens. Hélas, un requin à six têtes se pointe. Une bonne occasion de prouver la valeur du travail collectif.",
+    release: "18/08/2018",
+    image:
+      "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fS37m9pRBG0QYTeCEtzNBVVVL3H.jpg",
+  },
+  {
     title: "Ninja Kids",
     id: 763529,
     genre: "Action",
@@ -30,16 +60,6 @@ const movies = [
     released: "07-01-2009",
     image:
       "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8phJ4i9m1tBDJbOwwQPvdeWhN2h.jpg",
-  },
-  {
-    title: "Sharknado 3 : Oh Hell No!",
-    id: 331446,
-    genre: "Science-Fiction",
-    overview:
-      "Après avoir fait des ravages à Los Angeles, puis à New York, la troisième tornade de requins fait un retour destructeur dans la capitale des Etats-Unis, juste au moment où Fin se rend à la Maison Blanche. Après avoir détruit Washington D.C., la ’Sharknado’ détruira tout sur son passage jusqu’aux côtes de Floride, où April, enceinte de 9 mois atend impatiemment Fin. Alors qu’il rejoint sa famille au plus vite, des centaines de tornades de requins font alors leurs apparitions pour ne former plus qu’une tornade géante, qui menace de détruire toute la côte Est. Fin réalise qu’il va devoir trouver une solution, qui ne se trouve peut-être pas sur Terre ...",
-    release: "23/07/2015",
-    image:
-      "https://www.themoviedb.org/t/p/w1280/r7pYDCfhqw1DIxAcNNPvwKnn8ms.jpg",
   },
   {
     title: "Barbare",

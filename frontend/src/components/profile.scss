@@ -21,7 +21,7 @@ section {
     .profile-pic {
       min-width: 150px;
       width: 30%;
-      filter: invert(1);
+      // filter: invert(1);
     }
     .profile-name {
       font-size: clamp(28px, 2vw, 36px);
@@ -36,10 +36,10 @@ section {
     }
     .badges {
       display: flex;
-      filter: invert(1);
-      height: 100px;
+      height: 120px;
       justify-content: space-between;
       overflow-x: scroll;
+      gap: 30px;
     }
     .suggestions {
       display: flex;

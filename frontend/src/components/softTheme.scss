@@ -21,6 +21,9 @@ body.softTheme {
   h2 {
     color: var(--h2-color);
   }
+  h4 {
+    color: var(--h2-color);
+  }
   footer {
     background-color: var(--headerfooter-bg-color);
   }
@@ -36,8 +39,14 @@ body.softTheme {
   h2.bg-gradient-to-r {
     background: var(--gradient-color);
   }
+  h4.soft {
+    background: var(--gradient-color);
+  }
   div.grid {
     background-color: var(--button-bg-color);
+  }
+  div.fondCard {
+    background: #bbb2b2;
   }
   .header-menu {
     background: var(--headermenu-bg-color);
@@ -61,6 +70,45 @@ body.softTheme {
   }
   *::-webkit-scrollbar-thumb {
     background: var(--scrollbar-color);
+  }
+  .profile-container {
+    background: var(--main-bg-color);
+  }
+  .profile-avis {
+    background: var(--main-bg-color);
+  }
+  .profile-biography {
+    background: var(--main-bg-color);
+  }
+  .badges {
+    background: var(--main-bg-color);
+  }
+  .suggestions {
+    background: var(--main-bg-color);
+  }
+  .avis {
+    background: var(--main-bg-color);
+  }
+  p.bio {
+    background: var(--main-bg-color);
+  }
+  button.deconnexion {
+    background: transparent;
+  }
+  .profile-badges {
+    background-color: var(--main-bg-color);
+  }
+  .profile-suggestions {
+    background: var(--main-bg-color);
+  }
+  .profile-settings {
+    background: var(--main-bg-color);
+  }
+  .fondMovieList {
+    background: var(--main-bg-color);
+  }
+  .buttonPrevNext {
+    background: var(--main-bg-color);
   }
 }
 

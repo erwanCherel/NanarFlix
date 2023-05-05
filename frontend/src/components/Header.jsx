@@ -39,7 +39,7 @@ export default function Header({ userId }) {
   };
 
   const logout = () => {
-    localStorage.removeItem("id");
+    localStorage.clear();
     navigate("/");
     window.location.reload();
   };
@@ -107,7 +107,7 @@ export default function Header({ userId }) {
             </NavLink>
           </div>
           {userId && (
-            <button type="submit" onClick={logout}>
+            <button className="deconnexion" type="submit" onClick={logout}>
               Se déconnecter
             </button>
           )}
