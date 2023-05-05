@@ -44,7 +44,7 @@ export default function MovieDetails() {
         </div>
 
         <div className=" flex md:pr-12 mb-4">
-          <Rating />
+          <Rating id={id} />
         </div>
         <div className="  text-sm ml-3 md: text-white">
           Sortie : {currentMovie.release_date}
