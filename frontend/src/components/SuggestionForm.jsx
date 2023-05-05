@@ -9,9 +9,9 @@ function SuggestionForm() {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen ">
+    <div className="flex flex-col justify-center items-center h-screen  ">
       <h1 className="text-4xl font-bold mb-8 text-[#9EBA9B]">NANARFLIX</h1>
-      <div className="text-center">
+      <div className="text-center md:w-2/5">
         <h2 className="text-2xl font-bold mb-4 text-white">Suggestions</h2>
         {formSubmitted ? (
           <div className="bg-[#9EBA9B] text-white px-4 py-2 rounded mb-4">
@@ -19,7 +19,7 @@ function SuggestionForm() {
           </div>
         ) : (
           <form onSubmit={handleSubmit}>
-            <div className="mb-4">
+            <div className="mb-4 ">
               <label htmlFor="name" className="block text-white  mb-2">
                 Pseudo:
               </label>
@@ -28,7 +28,7 @@ function SuggestionForm() {
                 type="text"
                 id="name"
                 name="name"
-                className="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 "
+                className="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm  "
               />
             </div>
 
@@ -41,7 +41,7 @@ function SuggestionForm() {
                 type="email"
                 id="email"
                 name="email"
-                className="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm "
               />
             </div>
 
@@ -54,7 +54,7 @@ function SuggestionForm() {
                 type="text"
                 id="subject"
                 name="subject"
-                className="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                className="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm "
               />
             </div>
 
@@ -66,7 +66,7 @@ function SuggestionForm() {
                 required
                 id="message"
                 name="message"
-                className="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none h-40"
+                className="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm ue-500 "
               />
             </div>
 

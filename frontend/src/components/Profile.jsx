@@ -58,14 +58,18 @@ export default function Profile() {
         </h2>
 
         <div className="profile-biography">
-          <h4>Biographie</h4>
+          <h4 className="soft bg-gradient-to-r from-orange-200 to-purple-400 uppercase rounded-md my-6  px-3 py-1 text-[#472f4a]  md:ml-12 md:mr-12 ">
+            Biographie
+          </h4>
           <div>
-            <p>{currentUser.biography}</p>
+            <p className="bio">{currentUser.biography}</p>
           </div>
         </div>
 
         <div className="profile-avis">
-          <h4>Avis</h4>
+          <h4 className="soft bg-gradient-to-r from-purple-400 to-orange-200 uppercase rounded-md my-6  px-3 py-1 text-[#472f4a]  md:ml-12 md:mr-12 ">
+            Avis
+          </h4>
           <div className="avis">
             {movieList.map((movie) =>
               movie.poster_path ? (
@@ -76,7 +80,9 @@ export default function Profile() {
         </div>
 
         <div className="profile-badges">
-          <h4>Badges</h4>
+          <h4 className="soft bg-gradient-to-r from-orange-200 to-purple-400 uppercase rounded-md my-6  px-3 py-1 text-[#472f4a]  md:ml-12 md:mr-12 ">
+            Badges
+          </h4>
           <div className="badges">
             <img src={badge} alt="badge" />
             <img src={badge} alt="badge" />
@@ -87,7 +93,9 @@ export default function Profile() {
         </div>
 
         <div className="profile-suggestions">
-          <h4>Suggestions</h4>
+          <h4 className="soft bg-gradient-to-r from-purple-400 to-orange-200 uppercase rounded-md my-6  px-3 py-1 text-[#472f4a]  md:ml-12 md:mr-12 ">
+            Suggestions
+          </h4>
           <div className="suggestions">
             {movieList.map((movie) =>
               movie.poster_path ? (
