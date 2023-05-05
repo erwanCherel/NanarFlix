@@ -2,6 +2,16 @@ import { Link, NavLink } from "react-router-dom";
 
 const series = [
   {
+    title: "X-or, le sherif de l'espace",
+    image:
+      "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rnjMGvlaXZnUkbMjGnMaxAbADIH.jpg",
+    id: 4937,
+    genre: "",
+    overview:
+      "La Terre est menacée par les Makkus qui sont dirigés par Don Hora. Gavan est un justicier de l'espace qui se voit chargé de protéger la Terre. Ainsi, Gavan va devoir arriver incognito sur Terre, sous l'apparence d'un civil, et en utilisant son nom terrien Retsu Ichijouji. En plus de devoir affronter plusieurs créatures envoyées par Don Hora, Gavan va essayer de retrouver son père Voicer qui a disparu, certainement à cause des Makkus.",
+    released: "01/01/1982",
+  },
+  {
     title: "Smallville",
     image:
       "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/el4r3RABoLe5Hh6U2I3OybBjrme.jpg",

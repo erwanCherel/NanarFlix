@@ -107,7 +107,7 @@ export default function Header({ userId }) {
             </NavLink>
           </div>
           {userId && (
-            <button type="submit" onClick={logout}>
+            <button className="deconnexion" type="submit" onClick={logout}>
               Se déconnecter
             </button>
           )}

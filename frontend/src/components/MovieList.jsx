@@ -48,7 +48,11 @@ export default function MovieList() {
         ANNUAIRE
       </h1>
       <section className="MovieSection">
-        <div className="flex flex-row-reverse justify-between">
+        {" "}
+        <h2 className="flex justify-center items-center text-4xl   text-[#9EBA9B]">
+          FILMS
+        </h2>
+        <div className="fondMovieList flex flex-row-reverse justify-between">
           <form className="pt-2">
             <label className="mr-5 text-2xl text-[#9EBA9B]" htmlFor="genre">
               Genre :
@@ -67,19 +71,22 @@ export default function MovieList() {
               <option value="18">Drame</option>
             </select>
           </form>
-          <h2 className="text-4xl ml-14  text-[#9EBA9B]">FILMS</h2>
         </div>
         <section className="sectionMovieList gap-4 flex flex-wrap justify-center m-3 ">
-          {movieList.map((movie) =>
-            movie.poster_path ? (
-              <Movie {...movie} key={`movie-${movie.id}`} />
-            ) : null
-          )}
+          {movieList
+            .slice(0 - 14)
+            .map((movie) =>
+              movie.poster_path ? (
+                <Movie {...movie} key={`movie-${movie.id}`} />
+              ) : null
+            )}
         </section>
       </section>
 
       <section className="TvSection">
-        <h2 className="text-4xl ml-14 pt-5 text-[#9EBA9B]">SERIES</h2>
+        <h2 className="flex justify-center items-center text-4xl pt-14  text-[#9EBA9B]">
+          SERIES
+        </h2>
         <section className="sectionTvList gap-4 flex flex-wrap justify-center m-3 ">
           {tvList.map((tv) =>
             tv.poster_path ? <Tv {...tv} key={`tv-${tv.id}`} /> : null
