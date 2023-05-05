@@ -39,7 +39,7 @@ export default function Header({ userId }) {
   };
 
   const logout = () => {
-    localStorage.removeItem("id");
+    localStorage.clear();
     navigate("/");
     window.location.reload();
   };
