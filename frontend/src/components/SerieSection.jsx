@@ -143,7 +143,7 @@ export default function SerieSection() {
       </h2>
       <div className="flex gap-6 overflow-x-auto  mx-3 md:gap-5 w-auto md:ml-11 md:mr-11">
         {series.map((serie) => (
-          <Link to={`/tv/${serie.id}`}>
+          <Link key={serie.id} to={`/tv/${serie.id}`}>
             <div className="w-24 md:w-36 flex-shrink-0 " key={serie.title}>
               <img src={serie.image} alt={serie.title} />
             </div>

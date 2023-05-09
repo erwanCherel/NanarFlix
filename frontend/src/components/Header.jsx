@@ -1,7 +1,9 @@
 import PropTypes from "prop-types";
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import SoftThemeButton from "./SoftTheme";
 import Recherche from "./Recherche";
+import "../css/header.scss";
 
 export default function Header({ userId }) {
   const navigate = useNavigate();
@@ -65,6 +67,13 @@ export default function Header({ userId }) {
               <li className="icon account" />
             </NavLink>
           )}
+          {!userId && (
+            <div className="nav login">
+              <NavLink to="/login" className="login-navbar">
+                Se connecter
+              </NavLink>
+            </div>
+          )}
         </ul>
 
         <div className="header-menu" style={{ visibility: "hidden" }}>
@@ -97,7 +106,7 @@ export default function Header({ userId }) {
           {!userId && (
             <div className="nav login">
               <NavLink onClick={displayMenu} to="/login" className="">
-                Login
+                Se connecter
               </NavLink>
             </div>
           )}
@@ -107,10 +116,13 @@ export default function Header({ userId }) {
             </NavLink>
           </div>
           {userId && (
-            <button className="deconnexion" type="submit" onClick={logout}>
-              Se déconnecter
-            </button>
+            <div>
+              <button className="deconnexion" type="submit" onClick={logout}>
+                Se déconnecter
+              </button>
+            </div>
           )}
+          <SoftThemeButton />
         </div>
         <Recherche />
       </header>

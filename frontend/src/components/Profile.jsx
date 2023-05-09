@@ -1,6 +1,8 @@
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+
+import "../css/profile.scss";
 
 import Movie from "./Movie";
 import SettingsProfile from "./SettingsProfile";
@@ -130,7 +132,12 @@ export default function Profile() {
           </h4>
           <div className="badges">
             {Array.from({ length: 8 }).map((_, index) => (
-              <img className="" src={badges[index].imgSrc} alt="badge" />
+              <img
+                className=""
+                key={[index]}
+                src={badges[index].imgSrc}
+                alt="badge"
+              />
             ))}
           </div>
         </div>
@@ -155,8 +162,8 @@ export default function Profile() {
   );
 }
 
-Profile.propTypes = {
-  userId: PropTypes.number,
-};
+// Profile.propTypes = {
+//   userId: PropTypes.number,
+// };
 
-Profile.defaultProps = { userId: undefined };
+// Profile.defaultProps = { userId: undefined };

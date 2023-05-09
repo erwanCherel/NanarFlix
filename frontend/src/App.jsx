@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 
-import "./components/header.scss";
-import "./components/footer.scss";
-import "./components/profile.scss";
 import { Routes, Route } from "react-router-dom";
+import SignIn from "@pages/SignIn";
 import MovieDetails from "./components/MovieDetails";
 import TvDetails from "./components/TvDetails";
 import Header from "./components/Header";
@@ -41,6 +39,12 @@ function App() {
           <Route
             path="/login"
             element={<Login userId={userId} setUserId={setUserId} />}
+          />
+        )}
+        {!userId && (
+          <Route
+            path="/signin"
+            element={<SignIn userId={userId} setUserId={setUserId} />}
           />
         )}
         {userId && <Route path="/profil/:id" element={<Profil />} />}

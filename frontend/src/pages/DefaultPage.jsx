@@ -1,5 +1,5 @@
 import gifDefaultPage from "@assets/gif-defaultPage.gif";
-import "./defaultPage.scss";
+import "../css/defaultPage.scss";
 
 export default function DefaultPage() {
   return (
@@ -9,9 +9,6 @@ export default function DefaultPage() {
         alt="gif default page"
         className="gifDefaultPage"
       />
-      {/* <p className="textDefaultPage">
-        Il semblerait que cette page n'existe pas !
-      </p> */}
     </section>
   );
 }

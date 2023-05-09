@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
-import SoftThemeButton from "./SoftTheme";
+import "../css/footer.scss";
 
 export default function Footer({ userId }) {
   return (
@@ -35,7 +35,7 @@ export default function Footer({ userId }) {
         </div>
       </div>
       <div className="footer-bottom">
-        <p className="copyright">copyright ©️ Nanarflix</p> <SoftThemeButton />
+        <p className="copyright">copyright ©️ Nanarflix</p>
         <div className="footer-menu">
           <div className="nav accueil">
             <NavLink to="/" className="navlink">
@@ -62,7 +62,7 @@ export default function Footer({ userId }) {
           {!userId && (
             <div className="nav login">
               <NavLink to="/login" className="">
-                Login
+                Se connecter
               </NavLink>
             </div>
           )}

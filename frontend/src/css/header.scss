@@ -50,6 +50,9 @@
     width: 100%;
     position: relative;
     justify-content: space-between;
+    .login-navbar {
+      display: none;
+    }
   }
 
   .header-menu {
@@ -65,9 +68,6 @@
     height: 100vh;
     font-size: 1.75rem;
     line-height: 5rem;
-    // .nav.profil {
-    //   display: none;
-    // }
   }
 
   .header-search {
@@ -149,6 +149,11 @@
     .header-icons {
       gap: 2rem;
       max-width: 1280px;
+      align-items: center;
+      .login-navbar {
+        font-size: 1.25rem;
+        display: contents;
+      }
     }
     .icon {
       background-size: 80%;

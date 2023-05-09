@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./softTheme.scss";
+import "../css/softTheme.scss";
 
 export default function SoftThemeButton() {
   const [isSoftTheme, setIsSoftTheme] = useState(false);

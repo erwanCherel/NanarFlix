@@ -65,7 +65,8 @@ export default function Recherche() {
           {searchResults.map((movie) => (
             <Link to={`/movies/${movie.id}`}>
               <li key={movie.id} onClick={displaySearchBar}>
-                {movie.title}
+                {movie.title} (
+                {movie.release_date ? movie.release_date.slice(0, 4) : "????"})
               </li>
             </Link>
           ))}

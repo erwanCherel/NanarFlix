@@ -7,6 +7,7 @@ export default function MovieDetails() {
   const [currentMovie, setCurrentMovie] = useState();
 
   const { id } = useParams();
+  const idNumber = parseInt(id, 10);
 
   const getOneMovie = () => {
     fetch(
@@ -44,7 +45,7 @@ export default function MovieDetails() {
         </div>
 
         <div className=" flex md:pr-12 mb-4">
-          <Rating id={id} />
+          <Rating id={idNumber} />
         </div>
         <div className="  text-sm ml-3 md: text-white">
           Sortie : {currentMovie.release_date}

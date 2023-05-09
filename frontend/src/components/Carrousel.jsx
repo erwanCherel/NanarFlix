@@ -71,7 +71,7 @@ export default function Carrousel() {
       className="md:max-w-6xl ml-auto mr-auto"
     >
       {datas.map((movie) => (
-        <Link to={`/movies/${movie.id}`}>
+        <Link key={movie.id} to={`/movies/${movie.id}`}>
           {" "}
           <div key={movie.id}>
             <img src={movie.image} alt={movie.title} />

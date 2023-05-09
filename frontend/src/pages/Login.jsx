@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export default function Login({ setUserId }) {
   const navigate = useNavigate();
@@ -34,6 +34,7 @@ export default function Login({ setUserId }) {
         } else {
           setUserId(data.id);
           localStorage.setItem("id", data.id);
+          localStorage.setItem("username", data.firstname);
           navigate(`/profil/${data.id}`);
         }
       })
@@ -45,7 +46,7 @@ export default function Login({ setUserId }) {
 
   return (
     <section className="flex  flex-col justify-center items-center text-white gap-5 my-20">
-      <h2 className="text-3xl">Login</h2>
+      <h2 className="text-3xl">Connexion</h2>
       <form
         onSubmit={login}
         className="flex flex-col justify-center items-center text-xl gap-5"
@@ -74,12 +75,17 @@ export default function Login({ setUserId }) {
             onChange={handlePassword}
           />
         </label>
+        <NavLink className="hover:underline" to="/signin">
+          Pas encore inscrit ?
+        </NavLink>
+
         <button
           type="submit"
-          className="bg-white text-black rounded-xl w-auto p-2"
+          className="bg-white text-black rounded-xl w-auto p-2 active:scale-95"
         >
-          Log in
+          Se connecter
         </button>
+
         <small>{connectionError}</small>
       </form>
     </section>

@@ -216,7 +216,7 @@ export default function Community() {
           .map(({ image_avatar, reviewer, presentation, id }) => (
             <div
               className="fondCard grid grid-cols-4 gap-2 grid-flow-row grid- bg-[#9EBA9B] w-10/12 h-3/6 p-3 rounded-md mx-3 my-3 md:w-1/4 "
-              key={image_avatar}
+              key={id}
             >
               <h2 className="p-2   row-start-1 row-end-3 col-start-1 col-end-2">
                 {image_avatar}
