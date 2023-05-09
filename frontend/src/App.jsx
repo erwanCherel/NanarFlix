@@ -21,7 +21,7 @@ function App() {
   const [userId, setUserId] = useState();
 
   useEffect(() => {
-    console.info(userId);
+    // console.info(userId);
     const id = parseInt(localStorage.getItem("id"), 10);
     if (!Number.isNaN(id)) {
       setUserId(id);

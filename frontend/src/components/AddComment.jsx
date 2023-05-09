@@ -61,18 +61,6 @@ export default function CommentBox() {
     const avatarImage = avatars[newAvatarIndex].image;
     const idUser = parseInt(localStorage.getItem("id"), 10);
     const reviewer = localStorage.getItem("username");
-    setAllComments([
-      ...allComments,
-      {
-        idMovie,
-        idUser,
-        reviewer,
-        comment,
-        avatarImage,
-      },
-    ]);
-    // setReviewer("");
-    setComment("");
 
     if (!comment) {
       // eslint-disable-next-line no-alert
@@ -92,6 +80,19 @@ export default function CommentBox() {
         .then((res) => res.json())
         .then((data) => {
           console.info(data);
+          setAllComments([
+            ...allComments,
+            {
+              id: data.id,
+              idMovie,
+              idUser,
+              reviewer,
+              comment,
+              avatarImage,
+            },
+          ]);
+          // setReviewer("");
+          setComment("");
         })
         .catch((err) => {
           console.error(err);
@@ -113,9 +114,7 @@ export default function CommentBox() {
       });
   };
 
-  const deleteComment = (e) => {
-    const commentId = parseInt(e.target.id, 10);
-
+  const deleteComment = (commentId) => {
     // eslint-disable-next-line no-restricted-globals, no-alert
     if (confirm("Delete the comment?")) {
       fetch(
@@ -124,13 +123,10 @@ export default function CommentBox() {
           method: "DELETE",
         }
       )
-        .then((res) => {
-          res.text();
+        .then(() => {
           getComments();
         })
-        .then((data) => {
-          console.info(data);
-        })
+
         .catch((err) => {
           console.error(err);
         });
@@ -186,7 +182,7 @@ export default function CommentBox() {
       <div className="flex flex-wrap md:ml-1 md:mr-1 justify-center mb-10">
         {allComments.map(
           ({
-            id: key,
+            id: keyId,
             reviewer: reviewerName,
             idUser,
             comment: newComment,
@@ -194,14 +190,13 @@ export default function CommentBox() {
           }) => (
             <div
               className="relative grid grid-cols-4 gap-2 grid-flow-row grid- bg-[#9EBA9B] w-10/12 h-30 p-3 rounded-md mx-3 my-3 md:w-96 "
-              key={key}
+              key={keyId}
             >
               {parseInt(localStorage.getItem("id"), 10) === idUser && (
                 <button
                   type="button"
-                  id={key}
                   className="absolute right-1 text-xl hover:cursor-pointer text-red-800"
-                  onClick={deleteComment}
+                  onClick={() => deleteComment(keyId)}
                 >
                   X
                 </button>
@@ -217,15 +212,6 @@ export default function CommentBox() {
               <p className="p-3 text-center col-start-2 col-end-5 row-start-2 row-end-3 overflow-auto h-12 text-xs">
                 {newComment}
               </p>
-
-              {/* { localStorage.getItem("id")
-              <button
-                type="submit"
-                className="row-start-3 col-start-2 col-end-4 bg-white rounded"
-              >
-                supprimer
-              </button>
-} */}
             </div>
           )
         )}

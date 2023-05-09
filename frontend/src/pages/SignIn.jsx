@@ -1,11 +1,10 @@
-import { parse } from "postcss";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function SignIn() {
-  const [firstname, setFirstname] = useState("");
-  const [lastname, setLastname] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const setFirstname = useState("")[1];
+  const setLastname = useState("")[1];
+  const setEmail = useState("")[1];
+  const setPassword = useState("")[1];
   const [biography, setBiography] = useState("");
 
   const login = (e) => {
